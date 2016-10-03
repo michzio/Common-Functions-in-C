@@ -14,17 +14,22 @@ AR = ar rcs
 # -std=c99 use newer version 
 CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
+# libraries
+# custom 
+LIBPNG_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/liblibpng.a
+ZLIB_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/libzlib.a
+
 # the build target executable: 
 TARGET = common_functions 
-LIBRARY = libcommon_functions.a 
+LIBRARY = libcommon_functions.a
 
 all: $(TARGET)
 
-$(TARGET): $(LIBRARY) main.c 
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY)
+$(TARGET): main.c $(LIBRARY)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY)
 
-$(LIBRARY): strings.o base64.o
-	$(AR) $(LIBRARY) strings.o base64.o
+$(LIBRARY): strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
+	$(AR) $(LIBRARY) strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
 
 strings.o: strings.c strings.h 
 	$(CC) $(CFLAGS) -c strings.c
@@ -32,5 +37,17 @@ strings.o: strings.c strings.h
 base64.o: base64.c base64.h
 	$(CC) $(CFLAGS) -c base64.c 
 
+bitwise.o: bitwise.c bitwise.h 
+	$(CC) $(CFLAGS) -c bitwise.c
+
+md5.o: libraries/md5/md5.c libraries/md5/md5.h
+	$(CC) $(CFLAGS) -c libraries/md5/md5.c
+
+png-encoding.o: libraries/png/png-encoding.c libraries/png/png-encoding.h
+	$(CC) $(CFLAGS) -c libraries/png/png-encoding.c
+
+png-decoding.o: libraries/png/png-decoding.c libraries/png/png-decoding.h 
+	$(CC) $(CFLAGS) -c libraries/png/png-decoding.c 
+
 clean: 
-	$(RM) $(TARGET) $(LIBRARY) strings.o base64.o
+	$(RM) $(TARGET) $(LIBRARY) strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
