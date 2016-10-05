@@ -18,24 +18,34 @@ CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 # custom 
 LIBPNG_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/liblibpng.a
 ZLIB_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/libzlib.a
+UNIT_TESTS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/libunit_tests.a
 
 # the build target executable: 
 TARGET = common_functions 
 LIBRARY = libcommon_functions.a
 
+# source files 
+SOURCE_FILES = strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o png-helper.o bitmaps.o
+
+# test source files 
+TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o 
+
 all: $(TARGET)
 
-$(TARGET): main.c $(LIBRARY)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY)
+$(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(TEST_SOURCE_FILES) $(UNIT_TESTS_LIBRARY)
 
-$(LIBRARY): strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
-	$(AR) $(LIBRARY) strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
+$(LIBRARY): $(SOURCE_FILES)
+	$(AR) $(LIBRARY) $(SOURCE_FILES)
 
 strings.o: strings.c strings.h 
 	$(CC) $(CFLAGS) -c strings.c
 
 base64.o: base64.c base64.h
 	$(CC) $(CFLAGS) -c base64.c 
+
+bitmaps.o: bitmaps.c bitmaps.h 
+	$(CC) $(CFLAGS) -c bitmaps.c
 
 bitwise.o: bitwise.c bitwise.h 
 	$(CC) $(CFLAGS) -c bitwise.c
@@ -49,5 +59,23 @@ png-encoding.o: libraries/png/png-encoding.c libraries/png/png-encoding.h
 png-decoding.o: libraries/png/png-decoding.c libraries/png/png-decoding.h 
 	$(CC) $(CFLAGS) -c libraries/png/png-decoding.c 
 
+png-helper.o: libraries/png/png-helper.c libraries/png/png-helper.h 
+	$(CC) $(CFLAGS) -c libraries/png/png-helper.c 
+
+test_bitwise.o: test/test_bitwise.c test/test_bitwise.h 
+	$(CC) $(CFLAGS) -c test/test_bitwise.c 
+
+test_md5.o: test/test_md5.c test/test_md5.h 
+	$(CC) $(CFLAGS) -c test/test_md5.c
+
+test_png_decoding.o: test/test_png_decoding.c test/test_png_decoding.h 
+	$(CC) $(CFLAGS) -c test/test_png_decoding.c 
+
+test_png_encoding.o: test/test_png_encoding.c test/test_png_encoding.h 
+	$(CC) $(CFLAGS) -c test/test_png_encoding.c
+
+test_strings.o: test/test_strings.c test/test_strings.h 
+	$(CC) $(CFLAGS) -c test/test_strings.c
+
 clean: 
-	$(RM) $(TARGET) $(LIBRARY) strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o
+	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

@@ -10,6 +10,7 @@
 #include "test/test_strings.h"
 #include "test/test_bitwise.h"
 #include "test/test_md5.h"
+#include "test/test_png_encoding.h"
 
 int main(void) {
 
@@ -36,6 +37,7 @@ int main(void) {
     test_bitwise.run_tests();
     test_md5.run_tests();
     test_png_decoding.run_tests();
+    test_png_encoding.run_tests();
 
     return 0;
 }

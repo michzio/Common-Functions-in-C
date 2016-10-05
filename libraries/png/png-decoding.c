@@ -7,39 +7,7 @@
 #include <memory.h>
 #include "png-decoding.h"
 #include "../../../libpng-1.6.24/png.h"
-
-#define PNG_BIT_DEPTH_1 1
-#define PNG_BIT_DEPTH_2 2
-#define PNG_BIT_DEPTH_4 4
-#define PNG_BIT_DEPTH_8 8
-#define PNG_BIT_DEPTH_16 16
-
-static int getNoOfChannelsForPNGColorType(png_byte png_color_type) {
-
-    int no_of_channels = 0;
-
-    switch(png_color_type) {
-        case PNG_COLOR_TYPE_PALETTE:
-        case PNG_COLOR_TYPE_GRAY: {
-            no_of_channels = 1;
-            break;
-        }
-        case PNG_COLOR_TYPE_GRAY_ALPHA: {
-            no_of_channels = 2;
-            break;
-        }
-        case PNG_COLOR_TYPE_RGB: {
-            no_of_channels = 3;
-            break;
-        }
-        case PNG_COLOR_TYPE_RGB_ALPHA: {
-            no_of_channels = 4;
-            break;
-        }
-    }
-
-    return no_of_channels;
-}
+#include "png-helper.h"
 
 bool isPNGFile(const char *filePath) {
 
@@ -104,7 +72,7 @@ int readDataFromPNGFile(const char *filePath, unsigned char **data, size_t *data
     // get file descriptor to file under given path
     FILE *fp = fopen(filePath, "rb");
     if(!fp) {
-        fprintf(stderr, "%s: Could not open file under given file path.\n", __func__);
+        fprintf(stderr, "%s: Could not open file for binary reading at given path.\n", __func__);
         png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
         return -1;
     }
@@ -177,6 +145,7 @@ int readDataFromPNGFile(const char *filePath, unsigned char **data, size_t *data
         memcpy(*data + i*row_length, png_row, row_length);
     }
     free(png_row);
+    png_destroy_read_struct(&png_ptr, &info_ptr, NULL);
     fclose(fp);
 
     if(dataLength) *dataLength = data_length;
@@ -188,8 +157,26 @@ int readDataFromPNGFile(const char *filePath, unsigned char **data, size_t *data
     return 0;
 }
 
-int readRGBAFromPNGFile(const char *filePath, unsigned char **rgbaData, size_t *rgbaDataLength, size_t *width, size_t *height) {
+int readRGBAfromPNGFile(const char *filePath, unsigned char **rgbaData, size_t *rgbaDataLength, size_t *width, size_t *height, unsigned char *bitDepth) {
 
     unsigned char rgbaColorType = PNG_COLOR_TYPE_RGB_ALPHA;
-    return readDataFromPNGFile(filePath, rgbaData, rgbaDataLength, width, height, &rgbaColorType, NULL);
+    return readDataFromPNGFile(filePath, rgbaData, rgbaDataLength, width, height, &rgbaColorType, bitDepth);
+}
+
+extern int readRGBfromPNGFile(const char *filePath, unsigned char **rgbData, size_t *rgbDataLength, size_t *width, size_t *height, unsigned char *bitDepth) {
+
+    unsigned char rgbColorType = PNG_COLOR_TYPE_RGB;
+    return readDataFromPNGFile(filePath, rgbData, rgbDataLength, width, height, &rgbColorType, bitDepth);
+}
+
+int readGrayscaleAlphaFromPNGFile(const char *filePath, unsigned char **gaData, size_t *gaDataLength, size_t *width, size_t *height, unsigned char *bitDepth) {
+
+    unsigned char grayscaleAlphaColorType = PNG_COLOR_TYPE_GRAY_ALPHA;
+    return readDataFromPNGFile(filePath, gaData, gaDataLength, width, height, &grayscaleAlphaColorType, bitDepth);
+}
+
+int readGrayscaleFromPNGFile(const char *filePath, unsigned char **gData, size_t *gDataLength, size_t *width, size_t *height, unsigned char *bitDepth) {
+
+    unsigned char grayscaleColorType = PNG_COLOR_TYPE_GRAY;
+    return readDataFromPNGFile(filePath, gData, gDataLength, width, height, &grayscaleColorType, bitDepth);
 }

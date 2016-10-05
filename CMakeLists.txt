@@ -2,8 +2,8 @@ cmake_minimum_required(VERSION 3.6)
 project(Common_Functions)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99")
-set(SOURCE_FILES strings.h strings.c base64.h base64.c bitwise.h bitwise.c libraries/md5/md5.h libraries/md5/md5.c libraries/png/png-encoding.h libraries/png/png-encoding.c libraries/png/png-decoding.h libraries/png/png-decoding.c)
-set(TEST_SOURCE_FILES test/test_png_decoding.h test/test_png_decoding.c test/test_strings.h test/test_strings.c test/test_bitwise.h test/test_bitwise.c test/test_md5.h test/test_md5.c)
+set(SOURCE_FILES strings.h strings.c bitmaps.h bitmaps.c base64.h base64.c bitwise.h bitwise.c libraries/md5/md5.h libraries/md5/md5.c libraries/png/png-encoding.h libraries/png/png-encoding.c libraries/png/png-decoding.h libraries/png/png-decoding.c libraries/png/png-helper.h libraries/png/png-helper.c)
+set(TEST_SOURCE_FILES test/test_png_decoding.h test/test_png_decoding.c test/test_png_encoding.h test/test_png_encoding.c test/test_strings.h test/test_strings.c test/test_bitwise.h test/test_bitwise.c test/test_md5.h test/test_md5.c)
 # libraries paths
 set(LIBPNG_PATH /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24)
 set(ZLIB_PATH /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8)
