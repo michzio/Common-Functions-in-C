@@ -4,6 +4,8 @@
 
 #include <stdlib.h>
 #include <printf.h>
+#include <cv.h>
+#include <highgui.h>
 #include "bitmaps.h"
 
 unsigned char *RGBABytesArraySkipAlpha(const unsigned char *rgbaData, const size_t rgbaDataLength, size_t *rgbDataLength) {
@@ -202,4 +204,176 @@ unsigned char *GrayscaleAlphaBytesArraySkipAlpha(const unsigned char *gaData, co
 
     if(gDataLength) *gDataLength = newDataLength;
     return gData;
+}
+
+unsigned char *RGBABytesArray2BGRABytesArray(const unsigned char *rgbaData, const size_t rgbaDataLength) {
+
+    unsigned char *bgraData = malloc(sizeof(unsigned char) * rgbaDataLength);
+
+    for(int i=0; i<rgbaDataLength; i+=4) {
+        bgraData[i] = rgbaData[i+2];
+        bgraData[i+1] = rgbaData[i+1];
+        bgraData[i+2] = rgbaData[i];
+        bgraData[i+3] = rgbaData[i+3];
+    }
+
+    return bgraData;
+}
+
+unsigned char *RGBBytesArray2BGRBytesArray(const unsigned char *rgbData, const size_t rgbDataLength) {
+
+    unsigned char *bgrData = malloc(sizeof(unsigned char) * rgbDataLength);
+
+    for(int i=0; i<rgbDataLength; i+=3) {
+        bgrData[i] = rgbData[i+2];
+        bgrData[i+1] = rgbData[i+1];
+        bgrData[i+2] = rgbData[i];
+    }
+
+    return bgrData;
+}
+
+unsigned char *BGRABytesArray2RGBABytesArray(const unsigned char *bgraData, const size_t bgraDataLength) {
+    return RGBABytesArray2BGRABytesArray(bgraData, bgraDataLength);
+}
+
+unsigned char *BGRBytesArray2RGBBytesArray(const unsigned char *bgrData, const size_t bgrDataLength) {
+    return RGBBytesArray2BGRBytesArray(bgrData, bgrDataLength);
+}
+
+// resizing and scaling images stored as bitmaps (bytes array) using OpenCV library
+int resizeBitmap(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                 const int bitDepth, const int noOfChannels, unsigned char **outData, size_t *outDataLength, const size_t outWidth, const size_t outHeight) {
+
+    // create input image
+    IplImage *inImage = cvCreateImage(cvSize(inWidth, inHeight), bitDepth, noOfChannels);
+    cvSetData(inImage, inData, inImage->widthStep);
+
+    /* // show input image
+        cvNamedWindow("OpenCV Input Image", CV_WINDOW_FREERATIO);
+        cvShowImage("OpenCV Input Image", inImage);
+        cvWaitKey(0);
+        cvDestroyWindow("OpenCV Input Image");
+     */
+
+    // create output image
+    IplImage *outImage = cvCreateImage(cvSize(outWidth, outHeight), inImage->depth, inImage->nChannels);
+
+    // select interpolation type
+    double scaleFactor = (((double) outWidth)/inWidth + ((double) outHeight)/inHeight)/2;
+    int interpolation = (scaleFactor > 1.0) ? CV_INTER_LINEAR : CV_INTER_AREA;
+
+    // resize from input image to output image
+    cvResize(inImage, outImage, interpolation);
+
+    /*  // show output image
+        cvNamedWindow("OpenCV Output Image", CV_WINDOW_FREERATIO);
+        cvShowImage("OpenCV Output Image", outImage);
+        cvWaitKey(0);
+        cvDestroyWindow("OpenCV Output Image");
+    */
+
+    // get raw data from output image
+    int step = 0;
+    CvSize size;
+    cvGetRawData(outImage, outData, &step, &size);
+    *outDataLength = step*size.height;
+
+    cvReleaseImage(&inImage);
+    cvReleaseImage(&outImage);
+
+    return 0;
+}
+
+int resizeRGBA(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+               const int bitDepth, unsigned char **outData, size_t *outDataLength, const size_t outWidth, const size_t outHeight) {
+    return resizeBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, RGBA_COMPONENTS_PER_PIXEL, outData, outDataLength, outWidth, outHeight);
+}
+
+int resizeRGB(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+              const int bitDepth, unsigned char **outData, size_t *outDataLength, const size_t outWidth, const size_t outHeight) {
+    return resizeBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, RGB_COMPONENTS_PER_PIXEL, outData, outDataLength, outWidth, outHeight);
+}
+
+int resizeGrayscaleAlpha(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                         const int bitDepth, unsigned char **outData, size_t *outDataLength, const size_t outWidth, const size_t outHeight) {
+    return resizeBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, GRAYSCALE_ALPHA_COMPONENTS_PER_PIXEL, outData, outDataLength, outWidth, outHeight);
+}
+
+int resizeGrayscale(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                    const int bitDepth, unsigned char **outData, size_t *outDataLength, const size_t outWidth, const size_t outHeight) {
+    return resizeBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, GRAYSCALE_COMPONENTS_PER_PIXEL, outData, outDataLength, outWidth, outHeight);
+}
+
+int scaleBitmap(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                const int bitDepth, const int noOfChannels, unsigned char **outData, size_t *outDataLength, const double scaleFactor) {
+
+    // create input image
+    IplImage *inImage = cvCreateImage(cvSize(inWidth, inHeight), bitDepth, noOfChannels);
+    cvSetData(inImage, inData, (inWidth*noOfChannels*bitDepth)/CHAR_BIT);
+
+    // create output image
+    IplImage *outImage = cvCreateImage(cvSize(inWidth*scaleFactor, inHeight*scaleFactor), inImage->depth, inImage->nChannels);
+
+    // select interpolation type
+    int interpolation = (scaleFactor > 1.0) ? CV_INTER_LINEAR : CV_INTER_AREA;
+
+    // resize from input image to output image
+    cvResize(inImage, outImage, interpolation);
+
+    // get raw data from output image
+    int step = 0;
+    CvSize size;
+    cvGetRawData(outImage, outData, &step, &size);
+    *outDataLength = step*size.height;
+
+    cvReleaseImage(&inImage);
+    cvReleaseImage(&outImage);
+
+    return 0;
+}
+
+int scaleRGBA(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+              const int bitDepth, unsigned char **outData, size_t *outDataLength, const double scaleFactor) {
+    return scaleBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, RGBA_COMPONENTS_PER_PIXEL, outData, outDataLength, scaleFactor);
+}
+
+int scaleRGB(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+             const int bitDepth, unsigned char **outData, size_t *outDataLength, const double scaleFactor) {
+    return scaleBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, RGB_COMPONENTS_PER_PIXEL, outData, outDataLength, scaleFactor);
+}
+
+int scaleGrayscaleAlpha(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                        const int bitDepth, unsigned char **outData, size_t *outDataLength, const double scaleFactor) {
+    return scaleBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, GRAYSCALE_ALPHA_COMPONENTS_PER_PIXEL, outData, outDataLength, scaleFactor);
+}
+
+int scaleGrayscale(const unsigned char *inData, const size_t inDataLength, const size_t inWidth, const size_t inHeight,
+                   const int bitDepth, unsigned char **outData, size_t *outDataLength, const double scaleFactor) {
+    return scaleBitmap(inData, inDataLength, inWidth, inHeight, bitDepth, GRAYSCALE_COMPONENTS_PER_PIXEL, outData, outDataLength, scaleFactor);
+}
+
+int padBitmap(const unsigned char *data, const size_t dataLength, const size_t width, const size_t height,
+              const int bitDepth, const int noOfChannels, unsigned char **paddedData, size_t *paddedDataLength, const size_t row_multiple) {
+
+
+    size_t row_length = (width*noOfChannels*bitDepth)/CHAR_BIT;
+    size_t row_padding_size = row_multiple - row_length % row_multiple;
+
+    if(row_padding_size == 0) return 0;
+
+    size_t new_row_length = row_length + row_padding_size;
+    size_t newDataLength = height * new_row_length;
+    unsigned char *newData = malloc(sizeof(unsigned char) *newDataLength);
+
+    unsigned char padding[3] = {0, 0, 0};
+    for(int i=0; i<height; i++) {
+        memcpy(newData + i*new_row_length, data + i*row_length, row_length);
+        memcpy(newData + i*new_row_length + row_length, padding, row_padding_size);
+    }
+
+    *paddedData = newData;
+    *paddedDataLength = newDataLength;
+
+    return row_padding_size;
 }

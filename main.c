@@ -11,6 +11,7 @@
 #include "test/test_bitwise.h"
 #include "test/test_md5.h"
 #include "test/test_png_encoding.h"
+#include "test/test_opencv.h"
 
 int main(void) {
 
@@ -38,6 +39,7 @@ int main(void) {
     test_md5.run_tests();
     test_png_decoding.run_tests();
     test_png_encoding.run_tests();
+    test_opencv.run_tests();
 
     return 0;
 }
