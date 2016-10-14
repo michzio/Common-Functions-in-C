@@ -2,6 +2,38 @@
 <module type="CPP_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/types.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/array_helper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/system.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/numbers.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/video.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/types.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/numbers.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/strings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/base64.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/main.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_array_helper.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_png_decoding.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_numbers.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_png_decoding.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_png_encoding.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_opencv.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_bitwise.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_png_encoding.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_opencv.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_bitwise.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_numbers.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_md5.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_md5.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_strings.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_strings.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_array_helper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bitwise.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/base64.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/array_helper.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/system.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bitwise.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bitmaps.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-encoding.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-encoding.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-decoding.h" isTestSource="false" />
@@ -10,27 +42,8 @@
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-helper.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/md5/md5.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/md5/md5.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/base64.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bitmaps.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/main.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bitmaps.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bitwise.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/base64.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/strings.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/bitwise.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_md5.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_bitwise.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_png_decoding.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_bitwise.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_png_encoding.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_png_decoding.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_png_encoding.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_opencv.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_md5.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_opencv.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_strings.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/test/test_strings.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/strings.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/bitmaps.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

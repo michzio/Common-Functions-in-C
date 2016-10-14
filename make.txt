@@ -14,10 +14,17 @@ AR = ar rcs
 # -std=c99 use newer version 
 CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
+# include headers 
+CFLAGS += -I/usr/local/include
+
 # libraries
+# OpenCV
+OPENCV_LIBS = `pkg-config --cflags --libs opencv`
+
 # custom 
 LIBPNG_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/liblibpng.a
 ZLIB_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/libzlib.a
+COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a 
 UNIT_TESTS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/libunit_tests.a
 
 # the build target executable: 
@@ -25,21 +32,24 @@ TARGET = common_functions
 LIBRARY = libcommon_functions.a
 
 # source files 
-SOURCE_FILES = strings.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o png-helper.o bitmaps.o
+SOURCE_FILES = strings.o numbers.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o png-helper.o bitmaps.o array_helper.o types.o system.o
 
 # test source files 
-TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o 
+TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o test_numbers.o test_opencv.o test_array_helper.o
 
 all: $(TARGET)
 
 $(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(TEST_SOURCE_FILES) $(UNIT_TESTS_LIBRARY)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(TEST_SOURCE_FILES) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY) $(OPENCV_LIBS)
 
 $(LIBRARY): $(SOURCE_FILES)
 	$(AR) $(LIBRARY) $(SOURCE_FILES)
 
 strings.o: strings.c strings.h 
 	$(CC) $(CFLAGS) -c strings.c
+
+numbers.o: numbers.c numbers.h 
+	$(CC) $(CFLAGS) -c numbers.c
 
 base64.o: base64.c base64.h
 	$(CC) $(CFLAGS) -c base64.c 
@@ -62,6 +72,15 @@ png-decoding.o: libraries/png/png-decoding.c libraries/png/png-decoding.h
 png-helper.o: libraries/png/png-helper.c libraries/png/png-helper.h 
 	$(CC) $(CFLAGS) -c libraries/png/png-helper.c 
 
+array_helper.o: array_helper.c array_helper.h 
+	$(CC) $(CFLAGS) -c array_helper.c
+
+types.o: types.c types.h 
+	$(CC) $(CFLAGS) -c types.c
+
+system.o: system.c system.h
+	$(CC) $(CFLAGS) -c system.c
+
 test_bitwise.o: test/test_bitwise.c test/test_bitwise.h 
 	$(CC) $(CFLAGS) -c test/test_bitwise.c 
 
@@ -76,6 +95,15 @@ test_png_encoding.o: test/test_png_encoding.c test/test_png_encoding.h
 
 test_strings.o: test/test_strings.c test/test_strings.h 
 	$(CC) $(CFLAGS) -c test/test_strings.c
+
+test_numbers.o: test/test_numbers.c test/test_numbers.h 
+	$(CC) $(CFLAGS) -c test/test_numbers.c
+
+test_opencv.o: test/test_opencv.c test/test_opencv.h
+	$(CC) $(CFLAGS) -c test/test_opencv.c
+
+test_array_helper.o: test/test_array_helper.c test/test_array_helper.h 
+	$(CC) $(CFLAGS) -c test/test_array_helper.c
 
 clean: 
 	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

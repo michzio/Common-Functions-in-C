@@ -12,6 +12,8 @@
 #include "test/test_md5.h"
 #include "test/test_png_encoding.h"
 #include "test/test_opencv.h"
+#include "test/test_numbers.h"
+#include "test/test_array_helper.h"
 
 int main(void) {
 
@@ -35,6 +37,8 @@ int main(void) {
      */
 
     test_strings.run_tests();
+    test_numbers.run_tests();
+    test_array_helper.run_tests();
     test_bitwise.run_tests();
     test_md5.run_tests();
     test_png_decoding.run_tests();

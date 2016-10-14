@@ -4,8 +4,8 @@
 
 #include <stdlib.h>
 #include <printf.h>
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include "bitmaps.h"
 
 unsigned char *RGBABytesArraySkipAlpha(const unsigned char *rgbaData, const size_t rgbaDataLength, size_t *rgbDataLength) {

@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include "test_md5.h"
 #include "../libraries/md5/md5.h"
-#include "../../unit_tests/common/comparer.h"
+#include "../../comparers/comparer.h"
 #include "../../unit_tests/test/assertion.h"
 
 static void test_md5_hash(void) {

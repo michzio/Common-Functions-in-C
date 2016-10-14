@@ -2,8 +2,8 @@
 // Created by Michal Ziobro on 06/10/2016.
 //
 
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include <printf.h>
 #include "test_opencv.h"
 #include "../libraries/png/png-decoding.h"

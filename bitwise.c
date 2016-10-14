@@ -25,7 +25,14 @@ void bytes_array_dump(const unsigned char *Bytes_Array, const size_t length, con
 
     for(int i=0; i<length; i++) {
         printf("%02X ", Bytes_Array[i]);
-        if(i % row_len == 0) printf("\n");
+        if( i % row_len == (row_len-1) ) printf("\n");
+    }
+}
+void bytes_array_dump_segment(const unsigned char *Bytes_Array, const size_t segment_start, const size_t segment_end, const size_t row_len) {
+
+    for(int i=segment_start; i<segment_end; i++) {
+        printf("%02X ", Bytes_Array[i]);
+        if( (i-segment_start) % row_len == (row_len-1) ) printf("\n");
     }
 }
 
