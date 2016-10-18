@@ -32,10 +32,10 @@ TARGET = common_functions
 LIBRARY = libcommon_functions.a
 
 # source files 
-SOURCE_FILES = strings.o numbers.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o png-helper.o bitmaps.o array_helper.o types.o system.o
+SOURCE_FILES = strings.o numbers.o base64.o bitwise.o md5.o png-encoding.o png-decoding.o png-helper.o bitmaps.o array_helper.o types.o system.o lz4.o
 
 # test source files 
-TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o test_numbers.o test_opencv.o test_array_helper.o
+TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o test_numbers.o test_opencv.o test_array_helper.o test_lz4.o
 
 all: $(TARGET)
 
@@ -75,6 +75,9 @@ png-helper.o: libraries/png/png-helper.c libraries/png/png-helper.h
 array_helper.o: array_helper.c array_helper.h 
 	$(CC) $(CFLAGS) -c array_helper.c
 
+lz4.o: libraries/lz4/lz4.c libraries/lz4/lz4.h 
+	$(CC) $(CFLAGS) -c libraries/lz4/lz4.c
+
 types.o: types.c types.h 
 	$(CC) $(CFLAGS) -c types.c
 
@@ -104,6 +107,9 @@ test_opencv.o: test/test_opencv.c test/test_opencv.h
 
 test_array_helper.o: test/test_array_helper.c test/test_array_helper.h 
 	$(CC) $(CFLAGS) -c test/test_array_helper.c
+
+test_lz4.o: test/test_lz4.c test/test_lz4.h
+	$(CC) $(CFLAGS) -c test/test_lz4.c
 
 clean: 
 	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

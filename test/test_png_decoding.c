@@ -7,6 +7,7 @@
 #include <sys/stat.h>
 #include "test_png_decoding.h"
 #include "../libraries/png/png-decoding.h"
+#include "../libraries/png/png-helper.h"
 #include "../../unit_tests/test/assertion.h"
 #include "../bitwise.h"
 #include "../libraries/png/png-encoding.h"
@@ -109,7 +110,7 @@ static void test_read_RGBA_from_PNG_buffer(void) {
     assert_equal_int(wf_result, 0, "writing RGBA to PNG file succeeds");
 
     float compression_ratio = (float)pngDataLength/rgbaDataLength;
-    printf("RGBA/PNG compression ratio: %d/%d = %.2f\n", pngDataLength, rgbaDataLength, compression_ratio);
+    printf("RGBA/PNG compression ratio: %zu/%zu = %.2f\n", pngDataLength, rgbaDataLength, compression_ratio);
 }
 
 static void run_tests(void) {

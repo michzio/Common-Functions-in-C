@@ -28,6 +28,8 @@
       <sourceFolder url="file://$MODULE_DIR$/test/test_strings.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/test_strings.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test/test_array_helper.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_lz4.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/test/test_lz4.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bitwise.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/base64.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/array_helper.c" isTestSource="false" />
@@ -40,6 +42,8 @@
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-helper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-decoding.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-helper.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/libraries/lz4/lz4.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/libraries/lz4/lz4.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/md5/md5.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/md5/md5.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/strings.c" isTestSource="false" />

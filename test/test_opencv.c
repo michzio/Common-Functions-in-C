@@ -10,6 +10,7 @@
 #include "../bitmaps.h"
 #include "../../unit_tests/test/assertion.h"
 #include "../libraries/png/png-encoding.h"
+#include "../libraries/png/png-helper.h"
 #include "../bitwise.h"
 
 static void test_display_image(void) {

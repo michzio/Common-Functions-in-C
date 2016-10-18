@@ -8,12 +8,6 @@
 #ifndef COMMON_FUNCTIONS_PNG_DECODING_H
 #define COMMON_FUNCTIONS_PNG_DECODING_H
 
-#define PNG_BIT_DEPTH_1 1
-#define PNG_BIT_DEPTH_2 2
-#define PNG_BIT_DEPTH_4 4
-#define PNG_BIT_DEPTH_8 8
-#define PNG_BIT_DEPTH_16 16
-
 extern bool isPNGFile(const char *filePath);
 
 // reading from PNG file

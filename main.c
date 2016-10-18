@@ -14,6 +14,7 @@
 #include "test/test_opencv.h"
 #include "test/test_numbers.h"
 #include "test/test_array_helper.h"
+#include "test/test_lz4.h"
 
 int main(void) {
 
@@ -36,6 +37,7 @@ int main(void) {
     printf("decoded data: %s\n", decoded_data);
      */
 
+
     test_strings.run_tests();
     test_numbers.run_tests();
     test_array_helper.run_tests();
@@ -44,6 +46,7 @@ int main(void) {
     test_png_decoding.run_tests();
     test_png_encoding.run_tests();
     test_opencv.run_tests();
+    test_lz4.run_tests();
 
     return 0;
 }
