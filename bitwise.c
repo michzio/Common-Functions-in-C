@@ -9,6 +9,28 @@
 #include <inttypes.h>
 #include "bitwise.h"
 
+void bitwise_xor_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array) {
+
+    // perform bitwise XOR operation on bytes arrays A and B
+    for(int i=0; i<length; i++)
+        XOR_Bytes_Array[i] = (unsigned char)(A_Bytes_Array[i] ^ B_Bytes_Array[i]);
+}
+
+void bitwise_xor64_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array) {
+
+    const uint64_t *aBytes = (const uint64_t *) A_Bytes_Array;
+    const uint64_t *bBytes = (const uint64_t *) B_Bytes_Array;
+
+    for(int i = 0, j=0; i < length; i +=8, j++) {
+
+        uint64_t aXORbBytes = aBytes[j] ^ bBytes[j];
+        //printf("a XOR b = 0x%" PRIx64 "\n", aXORbBytes);
+
+        *((uint64_t*)(XOR_Bytes_Array + i)) = aXORbBytes;
+        //memcpy(xorBytes + i, &aXORbBytes, 8);
+    }
+}
+
 unsigned char *bitwise_xor(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length) {
 
     unsigned char *XOR_Bytes_Array;
@@ -16,9 +38,7 @@ unsigned char *bitwise_xor(const unsigned char *A_Bytes_Array, const unsigned ch
     // allocate XORed bytes array
     XOR_Bytes_Array = malloc(sizeof(unsigned char) * length);
 
-    // perform bitwise XOR operation on bytes arrays A and B
-    for(int i=0; i < length; i++)
-        XOR_Bytes_Array[i] = (unsigned char)(A_Bytes_Array[i] ^ B_Bytes_Array[i]);
+    bitwise_xor_static(A_Bytes_Array, B_Bytes_Array, length, XOR_Bytes_Array);
 
     return XOR_Bytes_Array;
 }
@@ -52,21 +72,14 @@ unsigned char *bitwise_xor64(const unsigned char *A_Bytes_Array, const unsigned 
 
 unsigned char *bitwise_xor64(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length) {
 
-    const uint64_t *aBytes = (const uint64_t *) A_Bytes_Array;
-    const uint64_t *bBytes = (const uint64_t *) B_Bytes_Array;
+    unsigned char *XOR_Bytes_Array;
 
-    unsigned char *xorBytes = malloc(sizeof(unsigned char)*length);
+    // allocate XORed bytes array
+    XOR_Bytes_Array = malloc(sizeof(unsigned char)*length);
 
-    for(int i = 0, j=0; i < length; i +=8, j++) {
+    bitwise_xor64_static(A_Bytes_Array, B_Bytes_Array, length, XOR_Bytes_Array);
 
-        uint64_t aXORbBytes = aBytes[j] ^ bBytes[j];
-        //printf("a XOR b = 0x%" PRIx64 "\n", aXORbBytes);
-
-        *((uint64_t*)(xorBytes + i)) = aXORbBytes;
-        //memcpy(xorBytes + i, &aXORbBytes, 8);
-    }
-
-    return xorBytes;
+    return XOR_Bytes_Array;
 }
 
 void bytes_array_dump(const unsigned char *Bytes_Array, const size_t length, const size_t row_len) {

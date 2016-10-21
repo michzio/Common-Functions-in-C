@@ -7,6 +7,21 @@
 
 #include <stddef.h>
 
+// display common resolutions
+#define WIDTH_8K_16_9 7680
+#define HEIGHT_8K_16_9 4320
+#define WIDTH_5K_16_9 5120
+#define HEIGHT_5K_16_9 2880
+#define WIDTH_4K_16_9 3840
+#define HEIGHT_4K_16_9 2160
+#define WIDTH_1440p_16_9 2560
+#define HEIGHT_1440p_16_9 1440
+#define WIDTH_1080p_16_9 1920
+#define HEIGHT_1080p_16_9 1080
+#define WIDTH_720p_16_9 1280
+#define HEIGHT_720p_16_9 720
+
+// bitmap pixel formats
 #define COMPONENTS_PER_PIXEL 4
 #define RGBA_COMPONENTS_PER_PIXEL COMPONENTS_PER_PIXEL
 #define ARGB_COMPONENTS_PER_PIXEL COMPONENTS_PER_PIXEL

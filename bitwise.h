@@ -7,9 +7,11 @@
 
 #include <ntsid.h>
 
+void bitwise_xor_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array);
+void bitwise_xor64_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array);
 unsigned char *bitwise_xor(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length);
 unsigned char *bitwise_xor64(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length);
-unsigned char *bitwise_abs_diff(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length);
+//unsigned char *bitwise_abs_diff(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length);
 
 void bytes_array_dump(const unsigned char *Bytes_Array, const size_t length, const size_t row_len);
 void bytes_array_dump_segment(const unsigned char *Bytes_Array, const size_t segment_start, const size_t segment_end, const size_t row_len);
