@@ -3,7 +3,7 @@
 //
 
 #include <stdlib.h>
-#include <printf.h>
+#include <stdio.h>
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
 #include "bitmaps.h"

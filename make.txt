@@ -1,4 +1,4 @@
-# Makefile for UNIX 
+﻿# Makefile for UNIX 
 
 # the compiler: gcc for C program, define as g++ for C++ 
 CC = gcc 
@@ -22,10 +22,10 @@ CFLAGS += -I/usr/local/include
 OPENCV_LIBS = `pkg-config --cflags --libs opencv`
 
 # custom 
-LIBPNG_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/liblibpng.a
-ZLIB_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/libzlib.a
-COMPARERS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/comparers/libcomparers.a 
-UNIT_TESTS_LIBRARY = /Users/michzio/Developer/MyProjects/BachelorDegree/c/unit_tests/libunit_tests.a
+LIBPNG_LIBRARY = ../libpng-1.6.24/liblibpng.a
+ZLIB_LIBRARY = ../zlib-1.2.8/libzlib.a
+COMPARERS_LIBRARY = ../comparers/libcomparers.a 
+UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
 
 # the build target executable: 
 TARGET = common_functions 
@@ -112,4 +112,4 @@ test_lz4.o: test/test_lz4.c test/test_lz4.h
 	$(CC) $(CFLAGS) -c test/test_lz4.c
 
 clean: 
-	$(RM) $(TARGET) $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)
+	$(RM) $(TARGET) $(TARGET).exe $(LIBRARY) $(SOURCE_FILES) $(TEST_SOURCE_FILES)

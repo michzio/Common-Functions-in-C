@@ -5,7 +5,7 @@
 #ifndef COMMON_FUNCTIONS_BITWISE_H
 #define COMMON_FUNCTIONS_BITWISE_H
 
-#include <ntsid.h>
+#include <stdio.h>
 
 void bitwise_xor_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array);
 void bitwise_xor64_static(const unsigned char *A_Bytes_Array, const unsigned char *B_Bytes_Array, const size_t length, unsigned char *XOR_Bytes_Array);
