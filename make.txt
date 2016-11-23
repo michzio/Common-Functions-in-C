@@ -1,4 +1,4 @@
-﻿# Makefile for UNIX 
+# Makefile for UNIX 
 
 # the compiler: gcc for C program, define as g++ for C++ 
 CC = gcc 
@@ -16,10 +16,13 @@ CFLAGS=-g -Wall -D__USE_FIXED_PROTOTYPES__ -std=c99
 
 # libraries
 # OpenCV
-OPENCV_LIBS = `pkg-config --cflags --libs opencv`
-OPENCV_LIBS_WIN += C:/opencv/cygwin/lib/libopencv_core310.dll.a
-OPENCV_LIBS_WIN += C:/opencv/cygwin/lib/libopencv_imgproc310.dll.a
-OPENCV_LIBS_WIN += C:/opencv/cygwin/lib/libopencv_highgui310.dll.a
+ifeq ($(OS),Windows_NT)
+	OPENCV_LIBS += C:/opencv/cygwin/lib/libopencv_core310.dll.a
+	OPENCV_LIBS += C:/opencv/cygwin/lib/libopencv_imgproc310.dll.a
+	OPENCV_LIBS += C:/opencv/cygwin/lib/libopencv_highgui310.dll.a
+else 
+	OPENCV_LIBS = `pkg-config --cflags --libs opencv`
+endif
 
 # custom
 LIBPNG_INCL_DIR = ../libpng-1.6.24
@@ -32,8 +35,11 @@ UNIT_TESTS_LIBRARY = ../unit_tests/libunit_tests.a
 # include headers
 INCL_DIRS += -I$(LIBPNG_INCL_DIR)
 INCL_DIRS += -I$(ZLIB_INCL_DIR)
-INCL_DIRS += -Ic:/opencv/build/include
-INCL_DIRS += -I/usr/local/include
+ifeq ($(OS),Windows_NT)
+	INCL_DIRS += -Ic:/opencv/build/include
+else
+	INCL_DIRS += -I/usr/local/include
+endif
 CFLAGS += $(INCL_DIRS)
 
 # the build target executable: 
@@ -49,7 +55,7 @@ TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encod
 all: $(TARGET)
 
 $(TARGET): main.c $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY) $(OPENCV_LIBS) $(OPENCV_LIBS_WIN)
+	$(CC) $(CFLAGS) -o $(TARGET) main.c $(TEST_SOURCE_FILES) $(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY) $(OPENCV_LIBS)
 
 $(LIBRARY): $(SOURCE_FILES)
 	$(AR) $(LIBRARY) $(SOURCE_FILES)

@@ -1,7 +1,10 @@
 //
 // Created by Michal Ziobro on 06/10/2016.
 //
+#ifdef __WIN32__
 #include <opencv2/core/fast_math.hpp>
+#endif
+
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
 #include <stdio.h>

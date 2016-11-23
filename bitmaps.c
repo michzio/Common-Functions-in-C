@@ -2,10 +2,13 @@
 // Created by Michal Ziobro on 04/10/2016.
 //
 
-#include <stdlib.h>
-#include <stdio.h>
+#ifdef __WIN32__
 #include <opencv2/core/fast_math.hpp>
 #include <opencv2/imgcodecs/imgcodecs_c.h>
+#endif
+
+#include <stdlib.h>
+#include <stdio.h>
 #include <opencv/highgui.h>
 #include <opencv/cv.h>
 #include "bitmaps.h"
