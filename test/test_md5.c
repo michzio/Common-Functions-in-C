@@ -3,7 +3,7 @@
 //
 
 #include <memory.h>
-#include <printf.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "test_md5.h"
 #include "../libraries/md5/md5.h"

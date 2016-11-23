@@ -2,7 +2,7 @@
 // Created by Michal Ziobro on 03/10/2016.
 //
 
-#include <printf.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
 #include "test_png_decoding.h"

@@ -5,7 +5,7 @@
 #ifndef COMMON_FUNCTIONS_TYPES_H
 #define COMMON_FUNCTIONS_TYPES_H
 
-#include <ntsid.h>
+#include <stdio.h>
 
 typedef enum {
     SUCCESS = 0,

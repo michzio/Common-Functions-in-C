@@ -4,9 +4,11 @@ project(Common_Functions)
 # OpenCV library including
 if(CYGWIN)
     # windows cygwin
-    set(OpenCV_DIR "C:/opencv/build/x64/vc14/lib")
+    #set(OpenCV_DIR "C:/opencv/build/x64/vc14/lib")
+    set(OpenCV_DIR "C:/opencv/cygwin")
     set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
-    include_directories("C:/opencv/build/include")
+    #include_directories("C:/opencv/build/include")
+    include_directories(${OpenCV_INCLUDE_DIRS})
 endif()
 # required both on unix (macOS) and windows cygwin
 find_package( OpenCV REQUIRED core imgproc highgui)
@@ -26,6 +28,10 @@ else()
     # unix
     message("building for Unix")
 endif()
+
+# include header files directories
+include_directories(${CMAKE_SOURCE_DIR}/../libpng-1.6.24)
+include_directories(${CMAKE_SOURCE_DIR}/../zlib-1.2.8)
 
 # libraries paths
 set(LIBPNG_PATH ${CMAKE_SOURCE_DIR}/../libpng-1.6.24)

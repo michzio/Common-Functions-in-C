@@ -5,7 +5,7 @@
 #ifndef COMMON_FUNCTIONS_ARRAY_HELPER_H
 #define COMMON_FUNCTIONS_ARRAY_HELPER_H
 
-#include <ntsid.h>
+#include <stdio.h>
 #include "types.h"
 #include "../comparers/comparer.h"
 

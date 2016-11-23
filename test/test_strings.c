@@ -3,7 +3,7 @@
 //
 
 #include <stddef.h>
-#include <printf.h>
+#include <stdio.h>
 #include "test_strings.h"
 #include "../strings.h"
 #include "../../unit_tests/test/assertion.h"

@@ -4,8 +4,10 @@
 
 #include <stdlib.h>
 #include <stdio.h>
-#include <opencv/cv.h>
+#include <opencv2/core/fast_math.hpp>
+#include <opencv2/imgcodecs/imgcodecs_c.h>
 #include <opencv/highgui.h>
+#include <opencv/cv.h>
 #include "bitmaps.h"
 
 unsigned char *RGBABytesArraySkipAlpha(const unsigned char *rgbaData, const size_t rgbaDataLength, size_t *rgbDataLength) {

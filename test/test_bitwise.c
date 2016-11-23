@@ -3,8 +3,9 @@
 //
 
 #include <memory.h>
-#include <printf.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include "test_bitwise.h"
 #include "../bitwise.h"
 #include "../../unit_tests/test/assertion.h"

@@ -35,10 +35,8 @@
       <sourceFolder url="file://$MODULE_DIR$/system.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/array_helper.c" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/system.c" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/opencv/build/x64/vc14/lib/OpenCVConfig.cmake" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/opencv/build/x64/vc14/lib/OpenCVModules.cmake" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/opencv/build/x64/vc14/lib/OpenCVModules-debug.cmake" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/opencv/build/x64/vc14/lib/OpenCVModules-release.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/opencv/cygwin/OpenCVConfig.cmake" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/opencv/cygwin/OpenCVModules.cmake" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/array_helper.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bitmaps.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/libraries/png/png-encoding.h" isTestSource="false" />
@@ -59,14 +57,54 @@
     <orderEntry type="module-library">
       <library name="Header Search Paths">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/../zlib-1.2.8" />
+          <root url="file://$MODULE_DIR$/../libpng-1.6.24" />
           <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/5.4.0/include" />
           <root url="file://C:/cygwin64/usr/include" />
-          <root url="file://C:/opencv/build/include" />
+          <root url="file://C:/opencv/cygwin" />
+          <root url="file://C:/opencv/sources/include" />
+          <root url="file://C:/opencv/sources/modules/shape/include" />
+          <root url="file://C:/opencv/sources/modules/imgproc/include" />
+          <root url="file://C:/opencv/sources/modules/flann/include" />
+          <root url="file://C:/opencv/sources/modules/highgui/include" />
+          <root url="file://C:/opencv/sources/modules/stitching/include" />
+          <root url="file://C:/opencv/sources/modules/superres/include" />
+          <root url="file://C:/opencv/sources/modules/features2d/include" />
+          <root url="file://C:/opencv/sources/modules/ts/include" />
+          <root url="file://C:/opencv/sources/modules/calib3d/include" />
+          <root url="file://C:/opencv/sources/modules/ml/include" />
+          <root url="file://C:/opencv/sources/modules/imgcodecs/include" />
+          <root url="file://C:/opencv/sources/modules/videostab/include" />
+          <root url="file://C:/opencv/sources/modules/core/include" />
+          <root url="file://C:/opencv/sources/modules/video/include" />
+          <root url="file://C:/opencv/sources/modules/videoio/include" />
+          <root url="file://C:/opencv/sources/modules/photo/include" />
+          <root url="file://C:/opencv/sources/modules/objdetect/include" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/../zlib-1.2.8" />
+          <root url="file://$MODULE_DIR$/../libpng-1.6.24" />
           <root url="file://C:/cygwin64/lib/gcc/x86_64-pc-cygwin/5.4.0/include" />
           <root url="file://C:/cygwin64/usr/include" />
-          <root url="file://C:/opencv/build/include" />
+          <root url="file://C:/opencv/cygwin" />
+          <root url="file://C:/opencv/sources/include" />
+          <root url="file://C:/opencv/sources/modules/shape/include" />
+          <root url="file://C:/opencv/sources/modules/imgproc/include" />
+          <root url="file://C:/opencv/sources/modules/flann/include" />
+          <root url="file://C:/opencv/sources/modules/highgui/include" />
+          <root url="file://C:/opencv/sources/modules/stitching/include" />
+          <root url="file://C:/opencv/sources/modules/superres/include" />
+          <root url="file://C:/opencv/sources/modules/features2d/include" />
+          <root url="file://C:/opencv/sources/modules/ts/include" />
+          <root url="file://C:/opencv/sources/modules/calib3d/include" />
+          <root url="file://C:/opencv/sources/modules/ml/include" />
+          <root url="file://C:/opencv/sources/modules/imgcodecs/include" />
+          <root url="file://C:/opencv/sources/modules/videostab/include" />
+          <root url="file://C:/opencv/sources/modules/core/include" />
+          <root url="file://C:/opencv/sources/modules/video/include" />
+          <root url="file://C:/opencv/sources/modules/videoio/include" />
+          <root url="file://C:/opencv/sources/modules/photo/include" />
+          <root url="file://C:/opencv/sources/modules/objdetect/include" />
         </SOURCES>
       </library>
     </orderEntry>

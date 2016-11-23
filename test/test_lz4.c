@@ -2,9 +2,9 @@
 // Created by Michal Ziobro on 18/10/2016.
 //
 
-#include <ntsid.h>
+#include <stdio.h>
 #include <stdlib.h>
-#include <printf.h>
+#include <time.h>
 #include "test_lz4.h"
 #include "../bitwise.h"
 #include "../libraries/lz4/lz4.h"

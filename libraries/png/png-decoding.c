@@ -7,7 +7,6 @@
 #include <memory.h>
 #include "png-decoding.h"
 #include "png-helper.h"
-#include "../../../libpng-1.6.24/png.h"
 
 bool isPNGFile(const char *filePath) {
 

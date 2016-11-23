@@ -1,10 +1,10 @@
 //
 // Created by Michal Ziobro on 06/10/2016.
 //
-
+#include <opencv2/core/fast_math.hpp>
 #include <opencv/cv.h>
 #include <opencv/highgui.h>
-#include <printf.h>
+#include <stdio.h>
 #include "test_opencv.h"
 #include "../libraries/png/png-decoding.h"
 #include "../bitmaps.h"
@@ -13,6 +13,7 @@
 #include "../libraries/png/png-helper.h"
 #include "../bitwise.h"
 
+#ifdef __APPLE__
 static void test_display_image(void) {
     IplImage *image;
     image= cvLoadImage("./test/resources/RGBA_8bits.png", CV_LOAD_IMAGE_COLOR);
@@ -23,6 +24,7 @@ static void test_display_image(void) {
     cvDestroyWindow("OpenCV Image Loading");
     cvReleaseImage(&image);
 }
+#endif
 
 static void test_cv_image(void) {
 

@@ -5,7 +5,7 @@
 #ifndef COMMON_FUNCTIONS_PNG_H
 #define COMMON_FUNCTIONS_PNG_H
 
-#include <ntsid.h>
+#include <stdio.h>
 
 // writing to PNG file
 extern int writeDataAsPNGFile(const unsigned char *data, const size_t width, const size_t height, const int bitDepth, const int colorType, const char *filePath);
