@@ -29,6 +29,8 @@ C:\mingw-w64\x86_64-6.2.0-win32-sjlj-rt_v5-rev1\mingw64\bin\x86_64-w64-mingw32-g
 9. Click Configure again to get rid of red entries in CMake-Gui and than click Generate
 
 10. Go to C:\opencv\cygwin directory in cmd.exe and build it using mingw32-make
+if compilation error related to standard threads than just commant out line 47 in detection_based_tracker.cpp
+i.e. //#define USE_STD_THREADS
 
 11. Use set(OpenCV_DIR "C:/opencv/cygwin") in CMakeLists.txt of current project
 

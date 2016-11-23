@@ -1,7 +1,7 @@
 //
 // Created by Michal Ziobro on 06/10/2016.
 //
-#ifdef __WIN32__
+#ifdef __CYGWIN__
 #include <opencv2/core/fast_math.hpp>
 #endif
 

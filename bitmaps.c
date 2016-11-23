@@ -2,7 +2,7 @@
 // Created by Michal Ziobro on 04/10/2016.
 //
 
-#ifdef __WIN32__
+#ifdef __CYGWIN__
 #include <opencv2/core/fast_math.hpp>
 #include <opencv2/imgcodecs/imgcodecs_c.h>
 #endif

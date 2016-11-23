@@ -11,6 +11,12 @@
 #include "../../unit_tests/test/assertion.h"
 #include "../../unit_tests/common/terminal.h"
 
+#ifdef __APPLE__
+    #define XOR_SCREENS_PNG_PATH "/Users/michzio/Desktop/xor_screens.png"
+#elif __CYGWIN__
+    #define XOR_SCREENS_PNG_PATH "C:/Users/michzio/Desktop/xor_screens.png"
+#endif
+
 static void test_bitwise_xor(void) {
 
     // bitwise XOR operation
@@ -41,7 +47,7 @@ static void test_bitwise_xor64(void) {
 
     //bytes_array_dump(xorData, dataALength, 10);
 
-    fwrite_binaries("/Users/michzio/Desktop/xor_screens.png", xorData, dataALength);
+    fwrite_binaries(XOR_SCREENS_PNG_PATH, xorData, dataALength);
 
     free(xorData);
     free(dataA);
