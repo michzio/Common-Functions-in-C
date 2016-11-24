@@ -9,8 +9,11 @@
 #include "../libraries/md5/md5.h"
 #include "../../comparers/comparer.h"
 #include "../../unit_tests/test/assertion.h"
+#include "../../unit_tests/common/terminal.h"
 
 static void test_md5_hash(void) {
+
+    TEST_FUNCTION_HEADER
 
     char *str_data = "Some data to MD5";
     char *md5  = md5_hash(str_data, strlen(str_data));

@@ -20,7 +20,7 @@
     <list default="true" id="b8cdcaad-a85a-4efb-be1e-498bec877a43" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_array_helper.c" afterPath="$PROJECT_DIR$/test/test_array_helper.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_md5.c" afterPath="$PROJECT_DIR$/test/test_md5.c" />
     </list>
     <ignored path="common.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,24 +40,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+            <state relative-caret-position="245">
+              <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_array_helper.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_array_helper.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-              <folding>
-                <element signature="e#50#68#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,7 +93,6 @@
         <option value="$PROJECT_DIR$/array_helper.h" />
         <option value="$PROJECT_DIR$/types.h" />
         <option value="$PROJECT_DIR$/test/test_png_decoding.c" />
-        <option value="$PROJECT_DIR$/test/test_md5.c" />
         <option value="$PROJECT_DIR$/test/test_lz4.c" />
         <option value="$PROJECT_DIR$/libraries/png/png-decoding.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
@@ -119,8 +106,9 @@
         <option value="$PROJECT_DIR$/strings.c" />
         <option value="$PROJECT_DIR$/test/test_strings.c" />
         <option value="$PROJECT_DIR$/test/test_numbers.c" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/test/test_array_helper.c" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/test/test_md5.c" />
       </list>
     </option>
   </component>
@@ -177,6 +165,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,7 +430,7 @@
       <workItem from="1479923167790" duration="3267000" />
       <workItem from="1479928023240" duration="2029000" />
       <workItem from="1479982861451" duration="1666000" />
-      <workItem from="1479984562978" duration="7668000" />
+      <workItem from="1479984562978" duration="8270000" />
     </task>
     <task id="LOCAL-00001" summary="test_strings.c, strings.c i.e. str_split() function - fixed problem with last token lack of \0 trailing character addition, written 2 new test functions that test str_split() function when string is empty or doesn't contain delimiter at all. Then it should return one empty or one entire string token respectively.">
       <created>1479999188049</created>
@@ -444,11 +446,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479999567859</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test_array_helper.c - tested on windows cygwin, added test function header definitions">
+      <created>1480005474822</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1480005474822</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="233705000" />
+    <option name="totallyTimeSpent" value="234307000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -518,7 +527,8 @@
     <MESSAGE value="CMakeLists.txt - updated to support Windows Cygwin build" />
     <MESSAGE value="test_strings.c, strings.c i.e. str_split() function - fixed problem with last token lack of \0 trailing character addition, written 2 new test functions that test str_split() function when string is empty or doesn't contain delimiter at all. Then it should return one empty or one entire string token respectively." />
     <MESSAGE value="test_numbers.c - testes, and code updated with test function header preprocessor definitions" />
-    <option name="LAST_COMMIT_MESSAGE" value="test_numbers.c - testes, and code updated with test function header preprocessor definitions" />
+    <MESSAGE value="test_array_helper.c - tested on windows cygwin, added test function header definitions" />
+    <option name="LAST_COMMIT_MESSAGE" value="test_array_helper.c - tested on windows cygwin, added test function header definitions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -799,13 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_md5.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/test_bitwise.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1122">
@@ -853,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/types.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
@@ -871,11 +866,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_array_helper.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="27">
           <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
           <folding>
             <element signature="e#50#68#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_md5.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="20" column="56" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="56" />
+          <folding>
+            <element signature="e#50#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
