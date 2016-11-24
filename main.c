@@ -40,7 +40,7 @@ int main(void) {
     test_bitwise.run_tests();
     test_strings.run_tests();
     test_numbers.run_tests();
-    //test_array_helper.run_tests();
+    test_array_helper.run_tests();
     //test_md5.run_tests();
     //test_png_decoding.run_tests();
     //test_png_encoding.run_tests();

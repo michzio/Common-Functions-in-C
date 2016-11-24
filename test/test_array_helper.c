@@ -7,6 +7,7 @@
 #include "test_array_helper.h"
 #include "../array_helper.h"
 #include "../../unit_tests/test/assertion.h"
+#include "../../unit_tests/common/terminal.h"
 
 #define ARRAY_SIZE 10
 #define STR_LEN 256
@@ -37,6 +38,9 @@ static void test_clean(void) {
 }
 
 static void test_array_find_int(void) {
+
+    TEST_FUNCTION_HEADER
+
     test_create();
     printf("%s:\n", __func__);
     array_print_int(int_array, ARRAY_SIZE);
@@ -48,6 +52,9 @@ static void test_array_find_int(void) {
 }
 
 static void test_array_find(void) {
+
+    TEST_FUNCTION_HEADER
+
     test_create();
     printf("%s:\n", __func__);
     array_print((const void **)str_array, ARRAY_SIZE, string_printer);
@@ -59,6 +66,9 @@ static void test_array_find(void) {
 }
 
 static void test_array_remove_int(void) {
+
+    TEST_FUNCTION_HEADER
+
     test_create();
     printf("%s:\n", __func__);
     array_print_int(int_array, ARRAY_SIZE);
@@ -72,6 +82,9 @@ static void test_array_remove_int(void) {
 }
 
 static void test_array_remove(void) {
+
+    TEST_FUNCTION_HEADER
+
     test_create();
     printf("%s:\n", __func__);
     array_print((const void **)str_array, ARRAY_SIZE, string_printer);
