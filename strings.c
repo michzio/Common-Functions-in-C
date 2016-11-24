@@ -60,8 +60,9 @@ char **str_split(const char *c_string, const char *delimiter, size_t *num_tokens
     p = (char *) c_string;
     t = tokens[i];
     while( *p != '\0' ) {
-        if( strncmp(p, delimiter, strlen(delimiter)) == 0 ) {
-            *t = '\0'; i++;
+        if (strncmp(p, delimiter, strlen(delimiter)) == 0) {
+            *t = '\0';
+            i++;
             t = tokens[i];
             p += strlen(delimiter);
         } else {
@@ -70,6 +71,7 @@ char **str_split(const char *c_string, const char *delimiter, size_t *num_tokens
             p++;
         }
     }
+    *t = '\0'; i++;
 
     return tokens;
 }

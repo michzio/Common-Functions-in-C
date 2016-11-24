@@ -12,12 +12,18 @@
 #include "../../unit_tests/common/terminal.h"
 
 #ifdef __APPLE__
-    #define XOR_SCREENS_PNG_PATH "/Users/michzio/Desktop/xor_screens.png"
+    #define XOR64_SCREENS_PNG_PATH "/Users/michzio/Desktop/xor64_screens.png"
+    #define SCREEN1_PNG_PATH "/Users/michzio/Desktop/screen1.png"
+    #define SCREEN2_PNG_PATH "/Users/michzio/Desktop/screen2.png"
 #elif __CYGWIN__
-    #define XOR_SCREENS_PNG_PATH "C:/Users/michzio/Desktop/xor_screens.png"
+    #define XOR64_SCREENS_PNG_PATH "C:/Users/michzio/Desktop/xor64_screens.png"
+    #define SCREEN1_PNG_PATH "C:/Users/michzio/Desktop/screen1.png"
+    #define SCREEN2_PNG_PATH "C:/Users/michzio/Desktop/screen2.png"
 #endif
 
 static void test_bitwise_xor(void) {
+
+    TEST_FUNCTION_HEADER
 
     // bitwise XOR operation
     char text1[] = "The First  Text";
@@ -30,10 +36,11 @@ static void test_bitwise_xor(void) {
         printf("%02X ", (char) xorBytesArray[i]);
         assert_equal_int(xorBytesArray[i], text1[i]^text2[i], "comparing next byte");
     }
-    printf("\n");
 }
 
 static void test_bitwise_xor64(void) {
+
+    TEST_FUNCTION_HEADER
 
     unsigned char *dataA = 0, *dataB = 0;
     size_t dataALength = 0, dataBLength = 0;
@@ -45,9 +52,13 @@ static void test_bitwise_xor64(void) {
     unsigned char *xorData = bitwise_xor64(dataA, dataB, dataALength);
     clock_t endClock = clock();
 
-    //bytes_array_dump(xorData, dataALength, 10);
+    // uncomment to check content of result bytes array after XORing
+    // bytes_array_dump(xorData, dataALength, 10);
 
-    fwrite_binaries(XOR_SCREENS_PNG_PATH, xorData, dataALength);
+    // uncomment to check if screens PNG data has been correctly read
+    // fwrite_binaries(SCREEN1_PNG_PATH, dataA, dataALength);
+    // fwrite_binaries(SCREEN2_PNG_PATH, dataB, dataBLength);
+    fwrite_binaries(XOR64_SCREENS_PNG_PATH, xorData, dataALength);
 
     free(xorData);
     free(dataA);
@@ -58,6 +69,8 @@ static void test_bitwise_xor64(void) {
 }
 
 static void test_bytes_array_dump(void) {
+
+    TEST_FUNCTION_HEADER
 
     // bitwise XOR operation
     char text1[] = "The First  Text";
