@@ -45,7 +45,7 @@ int main(void) {
     //test_png_decoding.run_tests();
     //test_png_encoding.run_tests();
     //test_opencv.run_tests();
-    //test_lz4.run_tests();
+    test_lz4.run_tests();
 
     return 0;
 }
