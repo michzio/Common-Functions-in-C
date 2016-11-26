@@ -42,9 +42,9 @@ int main(void) {
     test_numbers.run_tests();
     test_array_helper.run_tests();
     test_md5.run_tests();
-    //test_png_decoding.run_tests();
-    //test_png_encoding.run_tests();
-    //test_opencv.run_tests();
+    test_png_decoding.run_tests();
+    test_png_encoding.run_tests();
+    test_opencv.run_tests();
     test_lz4.run_tests();
 
     return 0;

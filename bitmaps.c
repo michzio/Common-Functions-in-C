@@ -284,8 +284,10 @@ int resizeBitmap(const unsigned char *inData, const size_t inDataLength, const s
     cvGetRawData(outImage, outData, &step, &size);
     *outDataLength = step*size.height;
 
-    cvReleaseImage(&inImage);
-    cvReleaseImage(&outImage);
+#ifdef __APPLE__
+    cvReleaseImageHeader(&outImage);
+    cvReleaseImageHeader(&inImage);
+#endif
 
     return 0;
 }
@@ -332,8 +334,10 @@ int scaleBitmap(const unsigned char *inData, const size_t inDataLength, const si
     cvGetRawData(outImage, outData, &step, &size);
     *outDataLength = step*size.height;
 
-    cvReleaseImage(&inImage);
+#ifdef __APPLE
     cvReleaseImage(&outImage);
+    cvReleaseImage(&inImage);
+#endif
 
     return 0;
 }
