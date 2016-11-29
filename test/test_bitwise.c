@@ -23,7 +23,7 @@
 
 static void test_bitwise_xor(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     // bitwise XOR operation
     char text1[] = "The First  Text";
@@ -40,7 +40,7 @@ static void test_bitwise_xor(void) {
 
 static void test_bitwise_xor64(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *dataA = 0, *dataB = 0;
     size_t dataALength = 0, dataBLength = 0;
@@ -70,7 +70,7 @@ static void test_bitwise_xor64(void) {
 
 static void test_bytes_array_dump(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     // bitwise XOR operation
     char text1[] = "The First  Text";

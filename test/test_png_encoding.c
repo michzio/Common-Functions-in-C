@@ -29,7 +29,7 @@
 
 static void test_write_RGBA_as_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -44,7 +44,7 @@ static void test_write_RGBA_as_PNG_file(void) {
 
 static void test_write_RGB_as_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -64,7 +64,7 @@ static void test_write_RGB_as_PNG_file(void) {
 
 static void test_write_Grayscale_Alpha_as_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -85,7 +85,7 @@ static void test_write_Grayscale_Alpha_as_PNG_file(void) {
 
 static void test_write_Grayscale_as_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -113,7 +113,7 @@ static void test_write_Grayscale_as_PNG_file(void) {
 
 static void test_write_RGBA_to_PNG_buffer(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     // read PNG file to RGBA
     unsigned char *rgbaData = 0;

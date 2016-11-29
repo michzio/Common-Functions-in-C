@@ -40,7 +40,7 @@
 
 static void test_display_image(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     // implemented only for macOS X
     #ifdef __APPLE__
@@ -58,7 +58,7 @@ static void test_display_image(void) {
 
 static void test_cv_image(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0, *bgraData = 0;
     size_t rgbaDataLength = 0;
@@ -87,7 +87,7 @@ static void test_cv_image(void) {
 
 static void test_cv_image_resize(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -121,7 +121,7 @@ static void test_cv_image_resize(void) {
 
 static void test_rgba_resize(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 0.5;
 
@@ -152,7 +152,7 @@ static void test_rgba_resize(void) {
 
 static void test_rgb_resize(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 0.5;
 
@@ -183,7 +183,7 @@ static void test_rgb_resize(void) {
 
 static void test_grayscale_alpha_resize() {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 0.5;
 
@@ -214,7 +214,7 @@ static void test_grayscale_alpha_resize() {
 
 static void test_grayscale_resize() {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 0.5;
 
@@ -250,7 +250,7 @@ static void test_grayscale_resize() {
 
 static void test_rgba_scale(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 2.0;
 
@@ -281,7 +281,7 @@ static void test_rgba_scale(void) {
 
 static void test_rgb_scale() {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 2.0;
 
@@ -312,7 +312,7 @@ static void test_rgb_scale() {
 
 static void test_grayscale_alpha_scale() {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 2.0;
 
@@ -343,7 +343,7 @@ static void test_grayscale_alpha_scale() {
 
 static void test_grayscale_scale() {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     double scaleFactor = 2.0;
 

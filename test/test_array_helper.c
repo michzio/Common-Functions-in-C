@@ -39,7 +39,7 @@ static void test_clean(void) {
 
 static void test_array_find_int(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     test_create();
     printf("%s:\n", __func__);
@@ -53,7 +53,7 @@ static void test_array_find_int(void) {
 
 static void test_array_find(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     test_create();
     printf("%s:\n", __func__);
@@ -67,7 +67,7 @@ static void test_array_find(void) {
 
 static void test_array_remove_int(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     test_create();
     printf("%s:\n", __func__);
@@ -83,7 +83,7 @@ static void test_array_remove_int(void) {
 
 static void test_array_remove(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     test_create();
     printf("%s:\n", __func__);

@@ -1,6 +1,18 @@
 cmake_minimum_required(VERSION 3.6)
 project(Common_Functions)
 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99")
+set(SOURCE_FILES strings.h strings.c numbers.h numbers.c bitmaps.h bitmaps.c base64.h base64.c bitwise.h bitwise.c libraries/md5/md5.h libraries/md5/md5.c libraries/png/png-encoding.h libraries/png/png-encoding.c libraries/png/png-decoding.h libraries/png/png-decoding.c libraries/png/png-helper.h libraries/png/png-helper.c libraries/lz4/lz4.h libraries/lz4/lz4.c video.h array_helper.h array_helper.c types.h types.c system.h system.c)
+set(TEST_SOURCE_FILES test/test_png_decoding.h test/test_png_decoding.c test/test_png_encoding.h test/test_png_encoding.c test/test_strings.h test/test_strings.c test/test_bitwise.h test/test_bitwise.c test/test_md5.h test/test_md5.c test/test_opencv.h test/test_opencv.c test/test_numbers.h test/test_numbers.c test/test_array_helper.h test/test_array_helper.c test/test_lz4.h test/test_lz4.c)
+
+if(CYGWIN)
+    # windows cygwin
+    message("building for Cygwin")
+else()
+    # unix
+    message("building for Unix")
+endif()
+
 # OpenCV library including
 if(CYGWIN)
     # windows cygwin
@@ -13,25 +25,6 @@ endif()
 # required both on unix (macOS) and windows cygwin
 find_package( OpenCV REQUIRED core imgproc highgui)
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui)
-
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c99")
-set(SOURCE_FILES strings.h strings.c numbers.h numbers.c bitmaps.h bitmaps.c base64.h base64.c bitwise.h bitwise.c libraries/md5/md5.h libraries/md5/md5.c libraries/png/png-encoding.h libraries/png/png-encoding.c libraries/png/png-decoding.h libraries/png/png-decoding.c libraries/png/png-helper.h libraries/png/png-helper.c libraries/lz4/lz4.h libraries/lz4/lz4.c video.h array_helper.h array_helper.c types.h types.c system.h system.c)
-set(TEST_SOURCE_FILES test/test_png_decoding.h test/test_png_decoding.c test/test_png_encoding.h test/test_png_encoding.c test/test_strings.h test/test_strings.c test/test_bitwise.h test/test_bitwise.c test/test_md5.h test/test_md5.c test/test_opencv.h test/test_opencv.c test/test_numbers.h test/test_numbers.c test/test_array_helper.h test/test_array_helper.c test/test_lz4.h test/test_lz4.c)
-
-# copy resources
-file(COPY test/resources DESTINATION test)
-
-if(CYGWIN)
-    # windows cygwin
-    message("building for Cygwin")
-else()
-    # unix
-    message("building for Unix")
-endif()
-
-# include header files directories
-include_directories(${CMAKE_SOURCE_DIR}/../libpng-1.6.24)
-include_directories(${CMAKE_SOURCE_DIR}/../zlib-1.2.8)
 
 # libraries paths
 set(LIBPNG_PATH ${CMAKE_SOURCE_DIR}/../libpng-1.6.24)
@@ -51,6 +44,13 @@ else()
     set(COMPARERS_LIB_PATH ${COMPARERS_PATH}/output/unix/lib/static/libcomparers.a)
     set(UNIT_TESTS_LIB_PATH ${UNIT_TESTS_PATH}/output/unix/lib/static/libunit_tests.a)
 endif()
+
+# include header files directories
+include_directories(${LIBPNG_PATH})
+include_directories(${ZLIB_PATH})
+
+# copy resources
+file(COPY test/resources DESTINATION test)
 
 add_library(Common_Functions_Lib SHARED ${SOURCE_FILES})
 set_target_properties(Common_Functions_Lib PROPERTIES OUTPUT_NAME common_functions_shared)

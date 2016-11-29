@@ -9,21 +9,21 @@
 
 static void test_min(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     assert_equal_int(10, min(10, 20), __func__);
 }
 
 static void test_max(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     assert_equal_int(20, max(10, 20), __func__);
 }
 
 static void test_range_rand(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     int rand = range_rand(10, 20);
     assert_in_range(rand, 10, 19, __func__);

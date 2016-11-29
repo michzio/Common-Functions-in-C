@@ -11,7 +11,7 @@
 
 static void test_str_split(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = "test1 test2 test3 test4 test5 test6";
     char *delimiter = " ";
@@ -32,7 +32,7 @@ static void test_str_split(void) {
 
 static void test_str_split_2(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = "delimiter";
     char *delimiter = "delimiter";
@@ -52,7 +52,7 @@ static void test_str_split_2(void) {
 
 static void test_str_split_3(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = "test1delimiter";
     char *delimiter = "delimiter";
@@ -72,7 +72,7 @@ static void test_str_split_3(void) {
 
 static void test_str_split_4(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = "delimitertest1";
     char *delimiter = "delimiter";
@@ -92,7 +92,7 @@ static void test_str_split_4(void) {
 
 static void test_str_split_5(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = ""; // empty string i.e. just "\0"
     char *delimiter = "delimiter";
@@ -111,7 +111,7 @@ static void test_str_split_5(void) {
 
 static void test_str_split_6(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *string = "test"; // any text not containing delimiter
     char *delimiter = "delimiter";

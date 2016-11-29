@@ -24,7 +24,7 @@
 
 static void test_is_png_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     bool isPNG = isPNGFile("./test/resources/RGB_8bits.png");
     assert_equal_int(isPNG, true, __func__);
@@ -32,7 +32,7 @@ static void test_is_png_file(void) {
 
 static void test_is_not_png_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     bool isPNG = isPNGFile("./test/resources/Jpeg.jpeg");
     assert_equal_int(isPNG, false, __func__);
@@ -40,7 +40,7 @@ static void test_is_not_png_file(void) {
 
 static void test_read_RGBA_from_RGB_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -53,7 +53,7 @@ static void test_read_RGBA_from_RGB_PNG_file(void) {
 
 static void test_read_RGBA_from_RGBA_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbaData = 0;
     size_t rgbaDataLength = 0;
@@ -69,7 +69,7 @@ static void test_read_RGBA_from_RGBA_PNG_file(void) {
 
 static void test_read_RGB_from_RGB_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *rgbData = 0;
     size_t rgbDataLength = 0;
@@ -82,7 +82,7 @@ static void test_read_RGB_from_RGB_PNG_file(void) {
 
 static void test_read_Grayscale_from_Grayscale_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *gData = 0;
     size_t gDataLength = 0;
@@ -100,7 +100,7 @@ static void test_read_Grayscale_from_Grayscale_PNG_file(void) {
 
 static void test_read_GrayscaleAlpha_from_GrayscaleAlpha_PNG_file(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *gaData = 0;
     size_t gaDataLength = 0;
@@ -116,7 +116,7 @@ static void test_read_GrayscaleAlpha_from_GrayscaleAlpha_PNG_file(void) {
 
 static void test_read_RGBA_from_PNG_buffer(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *pngData = 0;
     size_t pngDataLength = 0;

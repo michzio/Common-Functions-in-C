@@ -13,7 +13,7 @@
 
 static void test_md5_hash(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     char *str_data = "Some data to MD5";
     char *md5  = md5_hash(str_data, strlen(str_data));

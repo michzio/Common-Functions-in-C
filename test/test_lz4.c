@@ -14,7 +14,7 @@
 
 static void test_lz4_default_compression(void) {
 
-    TEST_FUNCTION_HEADER
+    TEST_FUNCTION_HEADER;
 
     unsigned char *data = 0, *compressedData = 0, *decompressedData = 0;
     int dataLength = 0, compressedDataLength = 0, compressionBounds = 0;
