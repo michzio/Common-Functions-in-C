@@ -1,0 +1,3 @@
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/output/unix/bin/common_functions
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/output/unix/lib/libcommon_functions.dylib
+/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/output/unix/lib/static/libcommon_functions.a

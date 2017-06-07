@@ -53,7 +53,7 @@ include_directories(${ZLIB_PATH})
 file(COPY test/resources DESTINATION test)
 
 add_library(Common_Functions_Lib SHARED ${SOURCE_FILES})
-set_target_properties(Common_Functions_Lib PROPERTIES OUTPUT_NAME common_functions_shared)
+set_target_properties(Common_Functions_Lib PROPERTIES OUTPUT_NAME common_functions)
 target_link_libraries(Common_Functions_Lib ${LIBPNG_LIB_PATH})
 target_link_libraries(Common_Functions_Lib ${ZLIB_LIB_PATH})
 target_link_libraries(Common_Functions_Lib ${OpenCV_LIBS})
