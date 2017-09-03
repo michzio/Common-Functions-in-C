@@ -33,6 +33,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.7.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.7.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.7.2/CMakeSystem.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/CMakeLists.txt"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/CMakeLists.txt"
   "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
   "/usr/local/share/OpenCV/OpenCVConfig.cmake"
   "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
@@ -48,12 +50,19 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Install_Common_Functions.dir/DependInfo.cmake"
   "CMakeFiles/Common_Functions.dir/DependInfo.cmake"
   "CMakeFiles/Common_Functions_Lib_Static.dir/DependInfo.cmake"
   "CMakeFiles/Common_Functions_Lib.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_1_6_24.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib_Static.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_1_2_8.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib_Static.dir/DependInfo.cmake"
+  "/Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib.dir/DependInfo.cmake"
   )

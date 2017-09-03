@@ -5,9 +5,9 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "test_strings.h"
-#include "../strings.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "strings.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 static void test_str_split(void) {
 

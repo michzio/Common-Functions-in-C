@@ -7,9 +7,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include "test_bitwise.h"
-#include "../bitwise.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "bitwise.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 #ifdef __APPLE__
     #define XOR64_SCREENS_PNG_PATH "/Users/michzio/Desktop/xor64_screens.png"

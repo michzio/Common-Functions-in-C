@@ -25,25 +25,22 @@ else
 endif
 
 # custom
-LIBPNG_INCL_DIR = ../libpng-1.6.24
-ZLIB_INCL_DIR = ../zlib-1.2.8
-COMPARERS_INCL_DIR = ../comparers
-UNIT_TESTS_INCL_DIR = ../unit_tests
+ZLIB_LIB_DIR=../zlib-1.2.8/outputs/debug/lib
+ZLIB_STATIC_LIB_PATH=$(ZLIB_LIB_DIR)/libzlib.a
+LIBPNG_LIB_DIR=../libpng-1.6.24/outputs/debug/lib
+LIBPNG_STATIC_LIB_PATH=$(LIBPNG_LIB_DIR)/liblibpng.a
+# executable's libraries
+COMPARERS_STATIC_LIB_PATH=../comparers/outputs/debug/lib/libcomparers.a
+UNIT_TESTS_STATIC_LIB_PATH=../unit_tests/outputs/debug/lib/libunit_tests.a
 
-LIBPNG_LIBRARY = $(LIBPNG_INCL_DIR)/output/debug/lib/static/liblibpng.a
-ZLIB_LIBRARY = $(ZLIB_INCL_DIR)/output/debug/lib/static/libzlib.a
-COMPARERS_LIBRARY = $(COMPARERS_INCL_DIR)/output/debug/lib/static/libcomparers.a 
-UNIT_TESTS_LIBRARY = $(UNIT_TESTS_INCL_DIR)/output/debug/lib/static/libunit_tests.a
-
-# include headers
-INCL_DIRS += -I$(LIBPNG_INCL_DIR)
-INCL_DIRS += -I$(ZLIB_INCL_DIR)
+# include directories
+INCLUDE_DIRS= ./include ../zlib-1.2.8/include ../libpng-1.6.24/include ../comparers/include ../unit_tests/include
+CFLAGS+= $(foreach d, $(INCLUDE_DIRS), -I$d)
 ifeq ($(OS),Windows_NT)
-	INCL_DIRS += -Ic:/opencv/build/include
+	CFLAGS+= -Ic:/opencv/build/include
 else
-	INCL_DIRS += -I/usr/local/include
+	CFLAGS+= -I/usr/local/include
 endif
-CFLAGS += $(INCL_DIRS)
 
 # the build target executable: 
 TARGET = common_functions
@@ -64,96 +61,100 @@ SOURCE_FILES = strings.o numbers.o base64.o bitwise.o md5.o png-encoding.o png-d
 # test source files 
 TEST_SOURCE_FILES = test_bitwise.o test_md5.o test_png_decoding.o test_png_encoding.o test_strings.o test_numbers.o test_opencv.o test_array_helper.o test_lz4.o
 
-# output directories 
-OUTPUT_DIR = output/debug
-OUTPUT_LIB_DIR = $(OUTPUT_DIR)/lib
-OUTPUT_STATIC_LIB_DIR = $(OUTPUT_LIB_DIR)/static
-OUTPUT_BIN_DIR = $(OUTPUT_DIR)/bin
-OUTPUT_TEST_DIR = $(OUTPUT_DIR)/test
+# outputs directories
+OUTPUTS_DIR = outputs/debug
+OUTPUTS_LIB_DIR = $(OUTPUTS_DIR)/lib
+OUTPUTS_BIN_DIR = $(OUTPUTS_DIR)/bin
+OUTPUTS_TEST_DIR = $(OUTPUTS_DIR)/test
 
 all: directories libraries $(TARGET)
 
-# make output directories
+# make outputs directories
 directories: 
-	@mkdir -p $(OUTPUT_DIR)
-	@mkdir -p $(OUTPUT_LIB_DIR)
-	@mkdir -p $(OUTPUT_STATIC_LIB_DIR)
-	@mkdir -p $(OUTPUT_BIN_DIR)
-	@mkdir -p $(OUTPUT_TEST_DIR)
+	@mkdir -p $(OUTPUTS_DIR)
+	@mkdir -p $(OUTPUTS_LIB_DIR)
+	@mkdir -p $(OUTPUTS_BIN_DIR)
+	@mkdir -p $(OUTPUTS_TEST_DIR)
 
-libraries: $(LIBRARY)
+libraries: $(LIBRARY) $(SHARED_LIBRARY) $(DYNAMIC_LIBRARY)
 
 $(TARGET): $(LIBRARY) $(TEST_SOURCE_FILES)
-	$(CC) $(CFLAGS) -o $(OUTPUT_BIN_DIR)/$(TARGET) main.c $(OUTPUT_TEST_DIR)/*.o $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(LIBPNG_LIBRARY) $(ZLIB_LIBRARY) $(COMPARERS_LIBRARY) $(UNIT_TESTS_LIBRARY) $(OPENCV_LIBS)
+	$(CC) $(CFLAGS) -o $(OUTPUTS_BIN_DIR)/$(TARGET) src/main.c $(OUTPUTS_TEST_DIR)/*.o $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(ZLIB_STATIC_LIB_PATH) $(LIBPNG_STATIC_LIB_PATH) $(COMPARERS_STATIC_LIB_PATH) $(UNIT_TESTS_STATIC_LIB_PATH) $(OPENCV_LIBS)
+
+$(SHARED_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) -L$(ZLIB_LIB_DIR) -L$(LIBPNG_LIB_DIR) -shared -o $(OUTPUTS_LIB_DIR)/$(SHARED_LIBRARY) $(OUTPUTS_DIR)/*.o -lzlib -llibpng $(OPENCV_LIBS)
+
+$(DYNAMIC_LIBRARY): $(SOURCE_FILES)
+	$(CC) $(CFLAGS) -L$(ZLIB_LIB_DIR) -L$(LIBPNG_LIB_DIR) -dynamiclib -o $(OUTPUTS_LIB_DIR)/$(DYNAMIC_LIBRARY) $(OUTPUTS_DIR)/*.o -lzlib -llibpng $(OPENCV_LIBS)
 
 $(LIBRARY): $(SOURCE_FILES)
-	$(AR) $(OUTPUT_STATIC_LIB_DIR)/$(LIBRARY) $(OUTPUT_DIR)/*.o
+	$(AR) $(OUTPUTS_LIB_DIR)/$(LIBRARY) $(OUTPUTS_DIR)/*.o
 
-strings.o: strings.c strings.h 
-	$(CC) $(CFLAGS) -c strings.c -o $(OUTPUT_DIR)/strings.o
+strings.o: src/strings.c include/strings.h
+	$(CC) $(CFLAGS) -c src/strings.c -o $(OUTPUTS_DIR)/strings.o
 
-numbers.o: numbers.c numbers.h 
-	$(CC) $(CFLAGS) -c numbers.c -o $(OUTPUT_DIR)/numbers.o
+numbers.o: src/numbers.c include/numbers.h
+	$(CC) $(CFLAGS) -c src/numbers.c -o $(OUTPUTS_DIR)/numbers.o
 
-base64.o: base64.c base64.h
-	$(CC) $(CFLAGS) -c base64.c -o $(OUTPUT_DIR)/base64.o
+base64.o: src/base64.c include/base64.h
+	$(CC) $(CFLAGS) -c src/base64.c -o $(OUTPUTS_DIR)/base64.o
 
-bitmaps.o: bitmaps.c bitmaps.h 
-	$(CC) $(CFLAGS) -c bitmaps.c -o $(OUTPUT_DIR)/bitmaps.o
+bitmaps.o: src/bitmaps.c include/bitmaps.h
+	$(CC) $(CFLAGS) -c src/bitmaps.c -o $(OUTPUTS_DIR)/bitmaps.o
 
-bitwise.o: bitwise.c bitwise.h 
-	$(CC) $(CFLAGS) -c bitwise.c -o $(OUTPUT_DIR)/bitwise.o
+bitwise.o: src/bitwise.c include/bitwise.h
+	$(CC) $(CFLAGS) -c src/bitwise.c -o $(OUTPUTS_DIR)/bitwise.o
 
 md5.o: libraries/md5/md5.c libraries/md5/md5.h
-	$(CC) $(CFLAGS) -c libraries/md5/md5.c -o $(OUTPUT_DIR)/md5.o
+	$(CC) $(CFLAGS) -c libraries/md5/md5.c -o $(OUTPUTS_DIR)/md5.o
 
 png-encoding.o: libraries/png/png-encoding.c libraries/png/png-encoding.h
-	$(CC) $(CFLAGS) -c libraries/png/png-encoding.c -o $(OUTPUT_DIR)/png-encoding.o
+	$(CC) $(CFLAGS) -c libraries/png/png-encoding.c -o $(OUTPUTS_DIR)/png-encoding.o
 
 png-decoding.o: libraries/png/png-decoding.c libraries/png/png-decoding.h 
-	$(CC) $(CFLAGS) -c libraries/png/png-decoding.c -o $(OUTPUT_DIR)/png-decoding.o
+	$(CC) $(CFLAGS) -c libraries/png/png-decoding.c -o $(OUTPUTS_DIR)/png-decoding.o
 
 png-helper.o: libraries/png/png-helper.c libraries/png/png-helper.h 
-	$(CC) $(CFLAGS) -c libraries/png/png-helper.c -o $(OUTPUT_DIR)/png-helper.o
+	$(CC) $(CFLAGS) -c libraries/png/png-helper.c -o $(OUTPUTS_DIR)/png-helper.o
 
-array_helper.o: array_helper.c array_helper.h 
-	$(CC) $(CFLAGS) -c array_helper.c -o $(OUTPUT_DIR)/array_helper.o
+array_helper.o: src/array_helper.c include/array_helper.h
+	$(CC) $(CFLAGS) -c src/array_helper.c -o $(OUTPUTS_DIR)/array_helper.o
 
 lz4.o: libraries/lz4/lz4.c libraries/lz4/lz4.h 
-	$(CC) $(CFLAGS) -c libraries/lz4/lz4.c -o $(OUTPUT_DIR)/lz4.o
+	$(CC) $(CFLAGS) -c libraries/lz4/lz4.c -o $(OUTPUTS_DIR)/lz4.o
 
-types.o: types.c types.h 
-	$(CC) $(CFLAGS) -c types.c -o $(OUTPUT_DIR)/types.o
+types.o: src/types.c include/types.h
+	$(CC) $(CFLAGS) -c src/types.c -o $(OUTPUTS_DIR)/types.o
 
-system.o: system.c system.h
-	$(CC) $(CFLAGS) -c system.c -o $(OUTPUT_DIR)/system.o
+system.o: src/system.c include/system.h
+	$(CC) $(CFLAGS) -c src/system.c -o $(OUTPUTS_DIR)/system.o
 
 test_bitwise.o: test/test_bitwise.c test/test_bitwise.h 
-	$(CC) $(CFLAGS) -c test/test_bitwise.c -o $(OUTPUT_TEST_DIR)/test_bitwise.o
+	$(CC) $(CFLAGS) -c test/test_bitwise.c -o $(OUTPUTS_TEST_DIR)/test_bitwise.o
 
 test_md5.o: test/test_md5.c test/test_md5.h 
-	$(CC) $(CFLAGS) -c test/test_md5.c -o $(OUTPUT_TEST_DIR)/test_md5.o
+	$(CC) $(CFLAGS) -c test/test_md5.c -o $(OUTPUTS_TEST_DIR)/test_md5.o
 
 test_png_decoding.o: test/test_png_decoding.c test/test_png_decoding.h 
-	$(CC) $(CFLAGS) -c test/test_png_decoding.c -o $(OUTPUT_TEST_DIR)/test_png_decoding.o
+	$(CC) $(CFLAGS) -c test/test_png_decoding.c -o $(OUTPUTS_TEST_DIR)/test_png_decoding.o
 
 test_png_encoding.o: test/test_png_encoding.c test/test_png_encoding.h 
-	$(CC) $(CFLAGS) -c test/test_png_encoding.c -o $(OUTPUT_TEST_DIR)/test_png_encoding.o
+	$(CC) $(CFLAGS) -c test/test_png_encoding.c -o $(OUTPUTS_TEST_DIR)/test_png_encoding.o
 
 test_strings.o: test/test_strings.c test/test_strings.h 
-	$(CC) $(CFLAGS) -c test/test_strings.c -o $(OUTPUT_TEST_DIR)/test_strings.o
+	$(CC) $(CFLAGS) -c test/test_strings.c -o $(OUTPUTS_TEST_DIR)/test_strings.o
 
 test_numbers.o: test/test_numbers.c test/test_numbers.h 
-	$(CC) $(CFLAGS) -c test/test_numbers.c -o $(OUTPUT_TEST_DIR)/test_numbers.o
+	$(CC) $(CFLAGS) -c test/test_numbers.c -o $(OUTPUTS_TEST_DIR)/test_numbers.o
 
 test_opencv.o: test/test_opencv.c test/test_opencv.h
-	$(CC) $(CFLAGS) -c test/test_opencv.c -o $(OUTPUT_TEST_DIR)/test_opencv.o
+	$(CC) $(CFLAGS) -c test/test_opencv.c -o $(OUTPUTS_TEST_DIR)/test_opencv.o
 
 test_array_helper.o: test/test_array_helper.c test/test_array_helper.h 
-	$(CC) $(CFLAGS) -c test/test_array_helper.c -o $(OUTPUT_TEST_DIR)/test_array_helper.o
+	$(CC) $(CFLAGS) -c test/test_array_helper.c -o $(OUTPUTS_TEST_DIR)/test_array_helper.o
 
 test_lz4.o: test/test_lz4.c test/test_lz4.h
-	$(CC) $(CFLAGS) -c test/test_lz4.c -o $(OUTPUT_TEST_DIR)/test_lz4.o
+	$(CC) $(CFLAGS) -c test/test_lz4.c -o $(OUTPUTS_TEST_DIR)/test_lz4.o
 
 clean: 
-	$(RM) -rf $(OUTPUT_DIR)
+	$(RM) -rf $(OUTPUTS_DIR)

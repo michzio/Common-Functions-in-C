@@ -57,28 +57,28 @@ include CMakeFiles/Common_Functions.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Common_Functions.dir/flags.make
 
-CMakeFiles/Common_Functions.dir/main.c.o: CMakeFiles/Common_Functions.dir/flags.make
-CMakeFiles/Common_Functions.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Common_Functions.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions.dir/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/main.c
+CMakeFiles/Common_Functions.dir/src/main.c.o: CMakeFiles/Common_Functions.dir/flags.make
+CMakeFiles/Common_Functions.dir/src/main.c.o: ../src/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Common_Functions.dir/src/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions.dir/src/main.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/main.c
 
-CMakeFiles/Common_Functions.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/main.c > CMakeFiles/Common_Functions.dir/main.c.i
+CMakeFiles/Common_Functions.dir/src/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions.dir/src/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/main.c > CMakeFiles/Common_Functions.dir/src/main.c.i
 
-CMakeFiles/Common_Functions.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/main.c -o CMakeFiles/Common_Functions.dir/main.c.s
+CMakeFiles/Common_Functions.dir/src/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions.dir/src/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/main.c -o CMakeFiles/Common_Functions.dir/src/main.c.s
 
-CMakeFiles/Common_Functions.dir/main.c.o.requires:
+CMakeFiles/Common_Functions.dir/src/main.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions.dir/main.c.o.requires
+.PHONY : CMakeFiles/Common_Functions.dir/src/main.c.o.requires
 
-CMakeFiles/Common_Functions.dir/main.c.o.provides: CMakeFiles/Common_Functions.dir/main.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/main.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions.dir/main.c.o.provides
+CMakeFiles/Common_Functions.dir/src/main.c.o.provides: CMakeFiles/Common_Functions.dir/src/main.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/src/main.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions.dir/src/main.c.o.provides
 
-CMakeFiles/Common_Functions.dir/main.c.o.provides.build: CMakeFiles/Common_Functions.dir/main.c.o
+CMakeFiles/Common_Functions.dir/src/main.c.o.provides.build: CMakeFiles/Common_Functions.dir/src/main.c.o
 
 
 CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o: CMakeFiles/Common_Functions.dir/flags.make
@@ -299,7 +299,7 @@ CMakeFiles/Common_Functions.dir/test/test_lz4.c.o.provides.build: CMakeFiles/Com
 
 # Object files for target Common_Functions
 Common_Functions_OBJECTS = \
-"CMakeFiles/Common_Functions.dir/main.c.o" \
+"CMakeFiles/Common_Functions.dir/src/main.c.o" \
 "CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o" \
 "CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o" \
 "CMakeFiles/Common_Functions.dir/test/test_strings.c.o" \
@@ -313,35 +313,35 @@ Common_Functions_OBJECTS = \
 # External object files for target Common_Functions
 Common_Functions_EXTERNAL_OBJECTS =
 
-common_functions: CMakeFiles/Common_Functions.dir/main.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_strings.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_bitwise.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_md5.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_opencv.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_numbers.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_array_helper.c.o
-common_functions: CMakeFiles/Common_Functions.dir/test/test_lz4.c.o
-common_functions: CMakeFiles/Common_Functions.dir/build.make
-common_functions: libcommon_functions.a
-common_functions: ../../comparers/output/unix/lib/static/libcomparers.a
-common_functions: ../../unit_tests/output/unix/lib/static/libunit_tests.a
-common_functions: ../../libpng-1.6.24/output/unix/lib/static/liblibpng.a
-common_functions: ../../zlib-1.2.8/output/unix/lib/static/libzlib.a
-common_functions: /usr/local/lib/libopencv_highgui.2.4.13.dylib
-common_functions: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
-common_functions: /usr/local/lib/libopencv_core.2.4.13.dylib
-common_functions: CMakeFiles/Common_Functions.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable common_functions"
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/src/main.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_strings.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_bitwise.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_md5.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_opencv.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_numbers.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_array_helper.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/test/test_lz4.c.o
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/build.make
+../outputs/bin/apple/common_functions: ../outputs/lib/apple/libcommon_functions.dylib
+../outputs/bin/apple/common_functions: ../../unit_tests/outputs/lib/apple/libunit_tests.dylib
+../outputs/bin/apple/common_functions: ../../comparers/outputs/lib/apple/libcomparers.dylib
+../outputs/bin/apple/common_functions: /usr/local/lib/libopencv_highgui.2.4.13.dylib
+../outputs/bin/apple/common_functions: /usr/local/lib/libopencv_imgproc.2.4.13.dylib
+../outputs/bin/apple/common_functions: /usr/local/lib/libopencv_core.2.4.13.dylib
+../outputs/bin/apple/common_functions: /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/lib/apple/liblibpng.dylib
+../outputs/bin/apple/common_functions: /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/lib/apple/libzlib.dylib
+../outputs/bin/apple/common_functions: CMakeFiles/Common_Functions.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable ../outputs/bin/apple/common_functions"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Common_Functions.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Common_Functions.dir/build: common_functions
+CMakeFiles/Common_Functions.dir/build: ../outputs/bin/apple/common_functions
 
 .PHONY : CMakeFiles/Common_Functions.dir/build
 
-CMakeFiles/Common_Functions.dir/requires: CMakeFiles/Common_Functions.dir/main.c.o.requires
+CMakeFiles/Common_Functions.dir/requires: CMakeFiles/Common_Functions.dir/src/main.c.o.requires
 CMakeFiles/Common_Functions.dir/requires: CMakeFiles/Common_Functions.dir/test/test_png_decoding.c.o.requires
 CMakeFiles/Common_Functions.dir/requires: CMakeFiles/Common_Functions.dir/test/test_png_encoding.c.o.requires
 CMakeFiles/Common_Functions.dir/requires: CMakeFiles/Common_Functions.dir/test/test_strings.c.o.requires

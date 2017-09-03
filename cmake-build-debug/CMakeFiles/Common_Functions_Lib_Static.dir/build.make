@@ -57,124 +57,124 @@ include CMakeFiles/Common_Functions_Lib_Static.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o: ../strings.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/strings.c
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o: ../src/strings.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/strings.c
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/strings.c > CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.i
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/strings.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.i
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/strings.c -o CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.s
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/strings.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.s
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.requires:
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.requires
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.requires
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.provides
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.provides
 
-CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o
-
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o: ../numbers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/numbers.c
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/numbers.c > CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.i
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/numbers.c -o CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.s
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.requires:
-
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.requires
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.provides
-
-CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o
+CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o
 
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o: ../bitmaps.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitmaps.c
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o: ../src/numbers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/numbers.c
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitmaps.c > CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.i
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/numbers.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.i
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitmaps.c -o CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.s
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/numbers.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.s
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.requires:
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.requires
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.requires
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.provides
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.provides
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o
-
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o: ../base64.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/base64.c
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/base64.c > CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.i
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/base64.c -o CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.s
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.requires:
-
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.requires
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.provides
-
-CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o
+CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o
 
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o: ../bitwise.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitwise.c
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o: ../src/bitmaps.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitmaps.c
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitwise.c > CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.i
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitmaps.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.i
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/bitwise.c -o CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.s
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitmaps.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.s
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.requires:
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.requires
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.requires
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.provides
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.provides
 
-CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o
+
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o: ../src/base64.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/base64.c
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/base64.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.i
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/base64.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.s
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.requires:
+
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.requires
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.provides
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o
+
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o: ../src/bitwise.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitwise.c
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitwise.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.i
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/bitwise.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.s
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.requires:
+
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.requires
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.provides
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o
 
 
 CMakeFiles/Common_Functions_Lib_Static.dir/libraries/md5/md5.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
@@ -297,134 +297,134 @@ CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o.provides: CMake
 CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o
 
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o: ../array_helper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/array_helper.c
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o: ../src/array_helper.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/array_helper.c
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/array_helper.c > CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.i
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/array_helper.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.i
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/array_helper.c -o CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.s
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/array_helper.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.s
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.requires:
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.requires
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.requires
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.provides
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.provides
 
-CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o
-
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o: ../types.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/types.c
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/types.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/types.c > CMakeFiles/Common_Functions_Lib_Static.dir/types.c.i
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/types.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/types.c -o CMakeFiles/Common_Functions_Lib_Static.dir/types.c.s
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.requires:
-
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.requires
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.provides
-
-CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o
+CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o
 
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o: ../system.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/system.c
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o: ../src/types.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/types.c
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/system.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/system.c > CMakeFiles/Common_Functions_Lib_Static.dir/system.c.i
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/types.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.i
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/system.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/system.c -o CMakeFiles/Common_Functions_Lib_Static.dir/system.c.s
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/types.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.s
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.requires:
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.requires:
 
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.requires
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.requires
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.requires
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.provides.build
-.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.provides
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.provides
 
-CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o
+CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o
+
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o: CMakeFiles/Common_Functions_Lib_Static.dir/flags.make
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o: ../src/system.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o   -c /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/system.c
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/system.c > CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.i
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/src/system.c -o CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.s
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.requires:
+
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.requires
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.provides: CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.requires
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.provides.build
+.PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.provides
+
+CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.provides.build: CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o
 
 
 # Object files for target Common_Functions_Lib_Static
 Common_Functions_Lib_Static_OBJECTS = \
-"CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o" \
 "CMakeFiles/Common_Functions_Lib_Static.dir/libraries/md5/md5.c.o" \
 "CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o" \
 "CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o" \
 "CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o" \
 "CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o" \
-"CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o"
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o" \
+"CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o"
 
 # External object files for target Common_Functions_Lib_Static
 Common_Functions_Lib_Static_EXTERNAL_OBJECTS =
 
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/md5/md5.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/build.make
-libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library libcommon_functions.a"
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/md5/md5.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/build.make
+../outputs/lib/apple/libcommon_functions.a: CMakeFiles/Common_Functions_Lib_Static.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library ../outputs/lib/apple/libcommon_functions.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Common_Functions_Lib_Static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Common_Functions_Lib_Static.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Common_Functions_Lib_Static.dir/build: libcommon_functions.a
+CMakeFiles/Common_Functions_Lib_Static.dir/build: ../outputs/lib/apple/libcommon_functions.a
 
 .PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/build
 
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o.requires
 CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/md5/md5.c.o.requires
 CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-encoding.c.o.requires
 CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-decoding.c.o.requires
 CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/png/png-helper.c.o.requires
 CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/libraries/lz4/lz4.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o.requires
-CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o.requires
+CMakeFiles/Common_Functions_Lib_Static.dir/requires: CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o.requires
 
 .PHONY : CMakeFiles/Common_Functions_Lib_Static.dir/requires
 

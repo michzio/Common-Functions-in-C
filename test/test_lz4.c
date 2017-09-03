@@ -6,10 +6,10 @@
 #include <stdlib.h>
 #include <time.h>
 #include "test_lz4.h"
-#include "../bitwise.h"
+#include "bitwise.h"
 #include "../libraries/lz4/lz4.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 
 static void test_lz4_default_compression(void) {

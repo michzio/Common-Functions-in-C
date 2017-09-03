@@ -6,7 +6,7 @@
 #include <zconf.h>
 #include <stdlib.h>
 #include <memory.h>
-#include "../../../libpng-1.6.24/png.h"
+#include "png.h"
 #include "png-encoding.h"
 #include "png-helper.h"
 

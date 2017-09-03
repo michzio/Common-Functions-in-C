@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libcommon_functions.a"
+  "../outputs/lib/apple/libcommon_functions.a"
 )

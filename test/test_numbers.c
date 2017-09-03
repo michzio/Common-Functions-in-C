@@ -3,9 +3,9 @@
 //
 
 #include "test_numbers.h"
-#include "../numbers.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "numbers.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 static void test_min(void) {
 

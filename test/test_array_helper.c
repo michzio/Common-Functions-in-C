@@ -5,9 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "test_array_helper.h"
-#include "../array_helper.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
+#include "array_helper.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
 
 #define ARRAY_SIZE 10
 #define STR_LEN 256

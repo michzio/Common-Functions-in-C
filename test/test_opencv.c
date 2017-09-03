@@ -12,11 +12,11 @@
 #include "../libraries/png/png-decoding.h"
 #include "../libraries/png/png-encoding.h"
 #include "../libraries/png/png-helper.h"
-#include "../bitmaps.h"
-#include "../bitwise.h"
-#include "../../unit_tests/test/assertion.h"
-#include "../../unit_tests/common/terminal.h"
-#include "../types.h"
+#include "../include/bitmaps.h"
+#include "../include/bitwise.h"
+#include "test/assertion.h"
+#include "common/terminal.h"
+#include "types.h"
 
 #ifdef __APPLE__
     #define TEST_RGBA_RESIZE_PNG_PATH "/Users/michzio/Desktop/test_rgba_resize.png"

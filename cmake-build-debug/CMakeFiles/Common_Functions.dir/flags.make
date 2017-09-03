@@ -6,5 +6,5 @@ C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacO
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/local/include/opencv -I/usr/local/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../libpng-1.6.24 -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../zlib-1.2.8 
+C_INCLUDES = -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/libraries -I/usr/local/include/opencv -I/usr/local/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../zlib-1.2.8/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../libpng-1.6.24/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../unit_tests/include -I/Users/michzio/Developer/MyProjects/BachelorDegree/c/common/../comparers/include 
 

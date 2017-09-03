@@ -56,38 +56,16 @@ CMAKE_BINARY_DIR = /Users/michzio/Developer/MyProjects/BachelorDegree/c/common/c
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/strip
-install/strip/fast: install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : install/strip/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -99,28 +77,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -153,19 +109,6 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named Install_Common_Functions
-
-# Build rule for target.
-Install_Common_Functions: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Install_Common_Functions
-.PHONY : Install_Common_Functions
-
-# fast build rule for target.
-Install_Common_Functions/fast:
-	$(MAKE) -f CMakeFiles/Install_Common_Functions.dir/build.make CMakeFiles/Install_Common_Functions.dir/build
-.PHONY : Install_Common_Functions/fast
 
 #=============================================================================
 # Target rules for targets named Common_Functions
@@ -206,125 +149,83 @@ Common_Functions_Lib/fast:
 	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/build
 .PHONY : Common_Functions_Lib/fast
 
-array_helper.o: array_helper.c.o
+#=============================================================================
+# Target rules for targets named libpng_1_6_24
 
-.PHONY : array_helper.o
+# Build rule for target.
+libpng_1_6_24: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libpng_1_6_24
+.PHONY : libpng_1_6_24
 
-# target to build an object file
-array_helper.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/array_helper.c.o
-.PHONY : array_helper.c.o
+# fast build rule for target.
+libpng_1_6_24/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_1_6_24.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_1_6_24.dir/build
+.PHONY : libpng_1_6_24/fast
 
-array_helper.i: array_helper.c.i
+#=============================================================================
+# Target rules for targets named libpng_Lib_Static
 
-.PHONY : array_helper.i
+# Build rule for target.
+libpng_Lib_Static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libpng_Lib_Static
+.PHONY : libpng_Lib_Static
 
-# target to preprocess a source file
-array_helper.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/array_helper.c.i
-.PHONY : array_helper.c.i
+# fast build rule for target.
+libpng_Lib_Static/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib_Static.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib_Static.dir/build
+.PHONY : libpng_Lib_Static/fast
 
-array_helper.s: array_helper.c.s
+#=============================================================================
+# Target rules for targets named libpng_Lib
 
-.PHONY : array_helper.s
+# Build rule for target.
+libpng_Lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 libpng_Lib
+.PHONY : libpng_Lib
 
-# target to generate assembly for a file
-array_helper.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/array_helper.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/array_helper.c.s
-.PHONY : array_helper.c.s
+# fast build rule for target.
+libpng_Lib/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/libpng-1.6.24/outputs/CMakeFiles/libpng_Lib.dir/build
+.PHONY : libpng_Lib/fast
 
-base64.o: base64.c.o
+#=============================================================================
+# Target rules for targets named zlib_1_2_8
 
-.PHONY : base64.o
+# Build rule for target.
+zlib_1_2_8: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zlib_1_2_8
+.PHONY : zlib_1_2_8
 
-# target to build an object file
-base64.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/base64.c.o
-.PHONY : base64.c.o
+# fast build rule for target.
+zlib_1_2_8/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_1_2_8.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_1_2_8.dir/build
+.PHONY : zlib_1_2_8/fast
 
-base64.i: base64.c.i
+#=============================================================================
+# Target rules for targets named zlib_Lib_Static
 
-.PHONY : base64.i
+# Build rule for target.
+zlib_Lib_Static: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zlib_Lib_Static
+.PHONY : zlib_Lib_Static
 
-# target to preprocess a source file
-base64.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/base64.c.i
-.PHONY : base64.c.i
+# fast build rule for target.
+zlib_Lib_Static/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib_Static.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib_Static.dir/build
+.PHONY : zlib_Lib_Static/fast
 
-base64.s: base64.c.s
+#=============================================================================
+# Target rules for targets named zlib_Lib
 
-.PHONY : base64.s
+# Build rule for target.
+zlib_Lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 zlib_Lib
+.PHONY : zlib_Lib
 
-# target to generate assembly for a file
-base64.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/base64.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/base64.c.s
-.PHONY : base64.c.s
-
-bitmaps.o: bitmaps.c.o
-
-.PHONY : bitmaps.o
-
-# target to build an object file
-bitmaps.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitmaps.c.o
-.PHONY : bitmaps.c.o
-
-bitmaps.i: bitmaps.c.i
-
-.PHONY : bitmaps.i
-
-# target to preprocess a source file
-bitmaps.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitmaps.c.i
-.PHONY : bitmaps.c.i
-
-bitmaps.s: bitmaps.c.s
-
-.PHONY : bitmaps.s
-
-# target to generate assembly for a file
-bitmaps.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitmaps.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitmaps.c.s
-.PHONY : bitmaps.c.s
-
-bitwise.o: bitwise.c.o
-
-.PHONY : bitwise.o
-
-# target to build an object file
-bitwise.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitwise.c.o
-.PHONY : bitwise.c.o
-
-bitwise.i: bitwise.c.i
-
-.PHONY : bitwise.i
-
-# target to preprocess a source file
-bitwise.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitwise.c.i
-.PHONY : bitwise.c.i
-
-bitwise.s: bitwise.c.s
-
-.PHONY : bitwise.s
-
-# target to generate assembly for a file
-bitwise.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/bitwise.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/bitwise.c.s
-.PHONY : bitwise.c.s
+# fast build rule for target.
+zlib_Lib/fast:
+	$(MAKE) -f /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib.dir/build.make /Users/michzio/Developer/MyProjects/BachelorDegree/c/zlib-1.2.8/outputs/CMakeFiles/zlib_Lib.dir/build
+.PHONY : zlib_Lib/fast
 
 libraries/lz4/lz4.o: libraries/lz4/lz4.c.o
 
@@ -476,122 +377,272 @@ libraries/png/png-helper.c.s:
 	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/libraries/png/png-helper.c.s
 .PHONY : libraries/png/png-helper.c.s
 
-main.o: main.c.o
+src/array_helper.o: src/array_helper.c.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/main.c.s
-.PHONY : main.c.s
-
-numbers.o: numbers.c.o
-
-.PHONY : numbers.o
+.PHONY : src/array_helper.o
 
 # target to build an object file
-numbers.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/numbers.c.o
-.PHONY : numbers.c.o
+src/array_helper.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/array_helper.c.o
+.PHONY : src/array_helper.c.o
 
-numbers.i: numbers.c.i
+src/array_helper.i: src/array_helper.c.i
 
-.PHONY : numbers.i
+.PHONY : src/array_helper.i
 
 # target to preprocess a source file
-numbers.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/numbers.c.i
-.PHONY : numbers.c.i
+src/array_helper.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/array_helper.c.i
+.PHONY : src/array_helper.c.i
 
-numbers.s: numbers.c.s
+src/array_helper.s: src/array_helper.c.s
 
-.PHONY : numbers.s
+.PHONY : src/array_helper.s
 
 # target to generate assembly for a file
-numbers.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/numbers.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/numbers.c.s
-.PHONY : numbers.c.s
+src/array_helper.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/array_helper.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/array_helper.c.s
+.PHONY : src/array_helper.c.s
 
-strings.o: strings.c.o
+src/base64.o: src/base64.c.o
 
-.PHONY : strings.o
+.PHONY : src/base64.o
 
 # target to build an object file
-strings.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/strings.c.o
-.PHONY : strings.c.o
+src/base64.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/base64.c.o
+.PHONY : src/base64.c.o
 
-strings.i: strings.c.i
+src/base64.i: src/base64.c.i
 
-.PHONY : strings.i
+.PHONY : src/base64.i
 
 # target to preprocess a source file
-strings.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/strings.c.i
-.PHONY : strings.c.i
+src/base64.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/base64.c.i
+.PHONY : src/base64.c.i
 
-strings.s: strings.c.s
+src/base64.s: src/base64.c.s
 
-.PHONY : strings.s
+.PHONY : src/base64.s
 
 # target to generate assembly for a file
-strings.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/strings.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/strings.c.s
-.PHONY : strings.c.s
+src/base64.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/base64.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/base64.c.s
+.PHONY : src/base64.c.s
 
-system.o: system.c.o
+src/bitmaps.o: src/bitmaps.c.o
 
-.PHONY : system.o
+.PHONY : src/bitmaps.o
 
 # target to build an object file
-system.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/system.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/system.c.o
-.PHONY : system.c.o
+src/bitmaps.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitmaps.c.o
+.PHONY : src/bitmaps.c.o
 
-system.i: system.c.i
+src/bitmaps.i: src/bitmaps.c.i
 
-.PHONY : system.i
+.PHONY : src/bitmaps.i
 
 # target to preprocess a source file
-system.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/system.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/system.c.i
-.PHONY : system.c.i
+src/bitmaps.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitmaps.c.i
+.PHONY : src/bitmaps.c.i
 
-system.s: system.c.s
+src/bitmaps.s: src/bitmaps.c.s
 
-.PHONY : system.s
+.PHONY : src/bitmaps.s
 
 # target to generate assembly for a file
-system.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/system.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/system.c.s
-.PHONY : system.c.s
+src/bitmaps.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitmaps.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitmaps.c.s
+.PHONY : src/bitmaps.c.s
+
+src/bitwise.o: src/bitwise.c.o
+
+.PHONY : src/bitwise.o
+
+# target to build an object file
+src/bitwise.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitwise.c.o
+.PHONY : src/bitwise.c.o
+
+src/bitwise.i: src/bitwise.c.i
+
+.PHONY : src/bitwise.i
+
+# target to preprocess a source file
+src/bitwise.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitwise.c.i
+.PHONY : src/bitwise.c.i
+
+src/bitwise.s: src/bitwise.c.s
+
+.PHONY : src/bitwise.s
+
+# target to generate assembly for a file
+src/bitwise.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/bitwise.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/bitwise.c.s
+.PHONY : src/bitwise.c.s
+
+src/main.o: src/main.c.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/src/main.c.o
+.PHONY : src/main.c.o
+
+src/main.i: src/main.c.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/src/main.c.i
+.PHONY : src/main.c.i
+
+src/main.s: src/main.c.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/src/main.c.s
+.PHONY : src/main.c.s
+
+src/numbers.o: src/numbers.c.o
+
+.PHONY : src/numbers.o
+
+# target to build an object file
+src/numbers.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/numbers.c.o
+.PHONY : src/numbers.c.o
+
+src/numbers.i: src/numbers.c.i
+
+.PHONY : src/numbers.i
+
+# target to preprocess a source file
+src/numbers.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/numbers.c.i
+.PHONY : src/numbers.c.i
+
+src/numbers.s: src/numbers.c.s
+
+.PHONY : src/numbers.s
+
+# target to generate assembly for a file
+src/numbers.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/numbers.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/numbers.c.s
+.PHONY : src/numbers.c.s
+
+src/strings.o: src/strings.c.o
+
+.PHONY : src/strings.o
+
+# target to build an object file
+src/strings.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/strings.c.o
+.PHONY : src/strings.c.o
+
+src/strings.i: src/strings.c.i
+
+.PHONY : src/strings.i
+
+# target to preprocess a source file
+src/strings.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/strings.c.i
+.PHONY : src/strings.c.i
+
+src/strings.s: src/strings.c.s
+
+.PHONY : src/strings.s
+
+# target to generate assembly for a file
+src/strings.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/strings.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/strings.c.s
+.PHONY : src/strings.c.s
+
+src/system.o: src/system.c.o
+
+.PHONY : src/system.o
+
+# target to build an object file
+src/system.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/system.c.o
+.PHONY : src/system.c.o
+
+src/system.i: src/system.c.i
+
+.PHONY : src/system.i
+
+# target to preprocess a source file
+src/system.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/system.c.i
+.PHONY : src/system.c.i
+
+src/system.s: src/system.c.s
+
+.PHONY : src/system.s
+
+# target to generate assembly for a file
+src/system.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/system.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/system.c.s
+.PHONY : src/system.c.s
+
+src/types.o: src/types.c.o
+
+.PHONY : src/types.o
+
+# target to build an object file
+src/types.c.o:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.o
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/types.c.o
+.PHONY : src/types.c.o
+
+src/types.i: src/types.c.i
+
+.PHONY : src/types.i
+
+# target to preprocess a source file
+src/types.c.i:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.i
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/types.c.i
+.PHONY : src/types.c.i
+
+src/types.s: src/types.c.s
+
+.PHONY : src/types.s
+
+# target to generate assembly for a file
+src/types.c.s:
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/src/types.c.s
+	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/src/types.c.s
+.PHONY : src/types.c.s
 
 test/test_array_helper.o: test/test_array_helper.c.o
 
@@ -836,64 +887,23 @@ test/test_strings.c.s:
 	$(MAKE) -f CMakeFiles/Common_Functions.dir/build.make CMakeFiles/Common_Functions.dir/test/test_strings.c.s
 .PHONY : test/test_strings.c.s
 
-types.o: types.c.o
-
-.PHONY : types.o
-
-# target to build an object file
-types.c.o:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/types.c.o
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/types.c.o
-.PHONY : types.c.o
-
-types.i: types.c.i
-
-.PHONY : types.i
-
-# target to preprocess a source file
-types.c.i:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/types.c.i
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/types.c.i
-.PHONY : types.c.i
-
-types.s: types.c.s
-
-.PHONY : types.s
-
-# target to generate assembly for a file
-types.c.s:
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib_Static.dir/build.make CMakeFiles/Common_Functions_Lib_Static.dir/types.c.s
-	$(MAKE) -f CMakeFiles/Common_Functions_Lib.dir/build.make CMakeFiles/Common_Functions_Lib.dir/types.c.s
-.PHONY : types.c.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... Install_Common_Functions"
 	@echo "... Common_Functions"
-	@echo "... edit_cache"
-	@echo "... install/local"
-	@echo "... Common_Functions_Lib_Static"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... Common_Functions_Lib_Static"
 	@echo "... Common_Functions_Lib"
-	@echo "... array_helper.o"
-	@echo "... array_helper.i"
-	@echo "... array_helper.s"
-	@echo "... base64.o"
-	@echo "... base64.i"
-	@echo "... base64.s"
-	@echo "... bitmaps.o"
-	@echo "... bitmaps.i"
-	@echo "... bitmaps.s"
-	@echo "... bitwise.o"
-	@echo "... bitwise.i"
-	@echo "... bitwise.s"
+	@echo "... libpng_1_6_24"
+	@echo "... libpng_Lib_Static"
+	@echo "... libpng_Lib"
+	@echo "... zlib_1_2_8"
+	@echo "... zlib_Lib_Static"
+	@echo "... zlib_Lib"
 	@echo "... libraries/lz4/lz4.o"
 	@echo "... libraries/lz4/lz4.i"
 	@echo "... libraries/lz4/lz4.s"
@@ -909,18 +919,33 @@ help:
 	@echo "... libraries/png/png-helper.o"
 	@echo "... libraries/png/png-helper.i"
 	@echo "... libraries/png/png-helper.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... numbers.o"
-	@echo "... numbers.i"
-	@echo "... numbers.s"
-	@echo "... strings.o"
-	@echo "... strings.i"
-	@echo "... strings.s"
-	@echo "... system.o"
-	@echo "... system.i"
-	@echo "... system.s"
+	@echo "... src/array_helper.o"
+	@echo "... src/array_helper.i"
+	@echo "... src/array_helper.s"
+	@echo "... src/base64.o"
+	@echo "... src/base64.i"
+	@echo "... src/base64.s"
+	@echo "... src/bitmaps.o"
+	@echo "... src/bitmaps.i"
+	@echo "... src/bitmaps.s"
+	@echo "... src/bitwise.o"
+	@echo "... src/bitwise.i"
+	@echo "... src/bitwise.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/numbers.o"
+	@echo "... src/numbers.i"
+	@echo "... src/numbers.s"
+	@echo "... src/strings.o"
+	@echo "... src/strings.i"
+	@echo "... src/strings.s"
+	@echo "... src/system.o"
+	@echo "... src/system.i"
+	@echo "... src/system.s"
+	@echo "... src/types.o"
+	@echo "... src/types.i"
+	@echo "... src/types.s"
 	@echo "... test/test_array_helper.o"
 	@echo "... test/test_array_helper.i"
 	@echo "... test/test_array_helper.s"
@@ -948,9 +973,6 @@ help:
 	@echo "... test/test_strings.o"
 	@echo "... test/test_strings.i"
 	@echo "... test/test_strings.s"
-	@echo "... types.o"
-	@echo "... types.i"
-	@echo "... types.s"
 .PHONY : help
 
 
